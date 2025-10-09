@@ -11,7 +11,6 @@
     />
   </head>
 
-
   <body class="font-sans text-gray-800">
     <!-- Navbar -->
     <header class="bg-white fixed top-0 left-0 w-full z-50 shadow-sm">
@@ -103,7 +102,7 @@
       />
       <div class="container mx-auto px-7 py-4">
         <!-- Breadcrumb -->
-        <nav class="text-sm text-red-800 mb-4 px-6">Home &gt; About Us</nav>
+        <nav class="text-sm text-red-800 mb-4 px-6">Home > About Us</nav>
 
         <!-- Main Content -->
         <h1
@@ -493,6 +492,9 @@
           alert("❌ Something went wrong. Please try again later.");
         }
       });
+
+      // Add event listener to close button
+      document.getElementById('closeModal').addEventListener('click', closeModal);
     });
 
     function closeModal() {
