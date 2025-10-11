@@ -168,7 +168,7 @@ p {
 
 /* Navigation */
 .navbar {
-  background-color: white;
+  background-color: #DFDFDF;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   position: fixed;
   top: 0;
@@ -185,7 +185,7 @@ p {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 140px;
+  height: 100px;
 }
 
 .nav-logo {
@@ -195,8 +195,8 @@ p {
 }
 
 .logo {
-  height: 120px;
-  width: 252px;
+  height: 110px;
+  width: 230px;
 }
 
 .logo-icon {
@@ -1146,11 +1146,38 @@ li {
 }
 
 /* Responsive Design */
+@media (max-width: 1024px) {
+  .nav-container {
+    height: 120px;
+    padding: 0 15px;
+  }
+
+  .logo {
+    height: 100px;
+    width: 210px;
+  }
+
+  .nav-menu {
+    gap: 2px;
+    width: auto;
+  }
+
+  .nav-link {
+    font-size: 12px;
+    padding: 12px 20px;
+  }
+
+  .nav-home {
+    font-size: 12px;
+    padding: 12px 20px;
+  }
+}
+
 @media (max-width: 768px) {
   .nav-menu {
     position: fixed;
     left: -100%;
-    top: 100px;
+    top: 120px;
     flex-direction: column;
     background-color: white;
     width: 100%;
@@ -1159,6 +1186,7 @@ li {
     box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
     padding: 2rem 0;
     gap: 1rem;
+    z-index: 1000;
   }
 
   .nav-menu.active {
@@ -1181,6 +1209,71 @@ li {
     transform: translateY(-7px) rotate(-45deg);
   }
 
+  .nav-container {
+    height: 100px;
+    padding: 0 10px;
+  }
+
+  .logo {
+    height: 80px;
+    width: 168px;
+  }
+
+  .nav-link {
+    font-size: 14px;
+    padding: 15px 25px;
+    margin: 5px 0;
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+
+  .nav-home {
+    font-size: 14px;
+    padding: 15px 25px;
+    margin: 5px 0;
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .nav-container {
+    height: 90px;
+    padding: 0 8px;
+  }
+
+  .logo {
+    height: 70px;
+    width: 147px;
+  }
+
+  .nav-menu {
+    top: 90px;
+    padding: 1.5rem 0;
+  }
+
+  .nav-link {
+    font-size: 13px;
+    padding: 12px 20px;
+  }
+
+  .nav-home {
+    font-size: 13px;
+    padding: 12px 20px;
+  }
+
+  .nav-toggle {
+    gap: 3px;
+  }
+
+  .bar {
+    width: 22px;
+    height: 2px;
+  }
+}
+
   h1 {
     font-size: 2.5rem;
   }
@@ -1190,8 +1283,20 @@ li {
   }
 
   .hero {
-    padding: 100px 0 60px;
-    text-align: center;
+    padding-top: 120px;
+  }
+
+  .img {
+    height: 60vh;
+  }
+
+  .heading > h2 {
+    font-size: 2rem;
+    padding-top: 100px;
+  }
+
+  .heading > h2 > .subheading {
+    font-size: 1.6rem;
   }
 
   .hero-content {
@@ -1323,6 +1428,86 @@ section {
   scroll-margin-top: 100px;
 }
 
+/* Tailwind-based header responsive styles */
+@media (max-width: 1024px) {
+  .tailwind-header {
+    height: 120px !important;
+  }
+  
+  .tailwind-header .max-w-7xl {
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+  }
+  
+  .tailwind-header img {
+    height: 100px !important;
+    width: 210px !important;
+  }
+  
+  .tailwind-header nav {
+    gap: 8px !important;
+  }
+  
+  .tailwind-header nav a {
+    font-size: 12px !important;
+    padding: 12px 20px !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .tailwind-header {
+    height: 100px !important;
+  }
+  
+  .tailwind-header .max-w-7xl {
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+  }
+  
+  .tailwind-header img {
+    height: 80px !important;
+    width: 168px !important;
+  }
+  
+  .tailwind-header nav {
+    display: none !important;
+  }
+  
+  .tailwind-header .mobile-menu-button {
+    display: block !important;
+  }
+  
+  .tailwind-header .mobile-menu {
+    top: 100px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .tailwind-header {
+    height: 90px !important;
+  }
+  
+  .tailwind-header .max-w-7xl {
+    padding-left: 8px !important;
+    padding-right: 8px !important;
+  }
+  
+  .tailwind-header img {
+    height: 70px !important;
+    width: 147px !important;
+  }
+  
+  .tailwind-header .mobile-menu {
+    top: 90px !important;
+    padding: 1.5rem 0 !important;
+  }
+  
+  .tailwind-header .mobile-menu a {
+    font-size: 13px !important;
+    padding: 12px 20px !important;
+  }
+}
+
 /* Loading states */
 .loading {
   opacity: 0.6;
@@ -1346,4 +1531,15 @@ section {
   color: #059669;
   font-size: 0.875rem;
   margin-top: 0.25rem;
+}
+
+/* Ensure navbar is always visible */
+.tailwind-header {
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  z-index: 50 !important;
+  background-color: white !important;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1) !important;
 }

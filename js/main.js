@@ -1,4 +1,156 @@
-// Main JavaScript for Prime Logistics Solutions Website
+// const slider = document.getElementById("videoSlider");
+// const videos = slider.querySelectorAll("video");
+// const total = videos.length;
+// const btns = [btn1, btn2, btn3];
+// const mainHeading = document.getElementById("mainHeading");
+// const subHeading = document.getElementById("subHeading");
+// const nextBtn = document.getElementById("nextBtn");
+// const prevBtn = document.getElementById("prevBtn");
+
+// // Text content for each slide
+// const textData = [
+//   { h2: "Fast & Secure Logistics", h3: "For All Your Needs" },
+//   { h2: "Delivering Excellence with", h3: "Passion and Innovation" },
+//   { h2: "Multimodal Warehousing Solution", h3: "Seamless. Faster. Safer." },
+// ];
+
+// let index = 0;
+// let timer;
+
+// function updateSlider() {
+//   // slide move
+//   slider.style.transform = `translateX(-${index * 100}%)`;
+//   // pause all videos
+//   videos.forEach((v) => {
+//     v.pause();
+//     v.currentTime = 0;
+//   });
+//   // play active video
+//   videos[index].play();
+//   // update text
+//   mainHeading.textContent = textData[index].h2;
+//   subHeading.textContent = textData[index].h3;
+//   // underline active button
+//   btns.forEach((b, i) => {
+//     b.classList.remove("border-b-4", "border-yellow-400");
+//     b.classList.add("border-b-2", "border-transparent");
+//     if (i === index) {
+//       b.classList.remove("border-b-2", "border-transparent");
+//       b.classList.add("border-b-4", "border-yellow-400");
+//     }
+//   });
+// }
+
+// function startAutoPlay() {
+//   clearInterval(timer);
+//   timer = setInterval(() => {
+//     index = (index + 1) % total;
+//     updateSlider();
+//   }, 15000); // 15 seconds
+// }
+
+// // Buttons click
+// btns.forEach((b, i) => {
+//   b.addEventListener("click", () => {
+//     index = i;
+//     updateSlider();
+//     startAutoPlay();
+//   });
+// });
+
+// // Arrows click
+// nextBtn.addEventListener("click", () => {
+//   index = (index + 1) % total;
+//   updateSlider();
+//   startAutoPlay();
+// });
+
+// prevBtn.addEventListener("click", () => {
+//   index = (index - 1 + total) % total;
+//   updateSlider();
+//   startAutoPlay();
+// });
+
+// // init
+// updateSlider();
+// startAutoPlay(); // Main JavaScript for Prime Logistics Solutions Website
+
+const slider = document.getElementById("videoSlider");
+const videos = slider.querySelectorAll("video");
+const total = videos.length;
+const btns = [btn1, btn2, btn3];
+const mainHeading = document.getElementById("mainHeading");
+const subHeading = document.getElementById("subHeading");
+const nextBtn = document.getElementById("nextBtn");
+const prevBtn = document.getElementById("prevBtn");
+
+// Text content for each slide
+const textData = [
+  { h2: "Fast & Secure Logistics", h3: "For All Your Needs" , h2size: "text-[40px]" },
+  { h2: "Delivering Excellence with", h3: "Passion and Innovation" , h2size: "text-[80px]" },
+  { h2: "Multimodal Warehousing Solution" , h3: "Seamless. Faster. Safer." , h2size: "text-[10px]" },
+];
+
+let index = 0;
+let timer;
+
+function updateSlider() {
+  // slide move
+  slider.style.transform = `translateX(-${index * 100}%)`;
+  // pause all videos
+  videos.forEach((v) => {
+    v.pause();
+    v.currentTime = 0;
+  });
+  // play active video
+  videos[index].play();
+  // update text
+  mainHeading.textContent = textData[index].h2;
+  subHeading.textContent = textData[index].h3;
+  // underline active button
+  btns.forEach((b, i) => {
+    b.classList.remove("border-b-4", "border-yellow-400");
+    b.classList.add("border-b-2", "border-transparent");
+    if (i === index) {
+      b.classList.remove("border-b-2", "border-transparent");
+      b.classList.add("border-b-4", "border-yellow-400");
+    }
+  });
+}
+
+function startAutoPlay() {
+  clearInterval(timer);
+  timer = setInterval(() => {
+    index = (index + 1) % total;
+    updateSlider();
+  }, 15000); // 15 seconds
+}
+
+// Buttons click
+btns.forEach((b, i) => {
+  b.addEventListener("click", () => {
+    index = i;
+    updateSlider();
+    startAutoPlay();
+  });
+});
+
+// Arrows click
+nextBtn.addEventListener("click", () => {
+  index = (index + 1) % total;
+  updateSlider();
+  startAutoPlay();
+});
+
+prevBtn.addEventListener("click", () => {
+  index = (index - 1 + total) % total;
+  updateSlider();
+  startAutoPlay();
+});
+
+// init
+updateSlider();
+startAutoPlay();
 
 document.addEventListener("DOMContentLoaded", function () {
   // Initialize all functionality
@@ -12,7 +164,7 @@ document.addEventListener("DOMContentLoaded", function () {
 function initNavigation() {
   const navToggle = document.getElementById("nav-toggle");
   const navMenu = document.getElementById("nav-menu");
-  const navLinks = document.querySelectorAll(".nav-link");
+  const navLinks = document.querySelectorAll(".nav-link, .nav-home");
 
   // Mobile menu toggle
   if (navToggle && navMenu) {
@@ -350,7 +502,22 @@ function debounce(func, wait) {
 // Apply debouncing to scroll events
 const debouncedScrollHandler = debounce(function () {
   // Navbar scroll effect (already handled above)
-  // Add any other scroll-based functionality here
+
+  // Back to top button visibility
+  const backToTopBtn = document.querySelector(".back-to-top-btn");
+  if (backToTopBtn) {
+    if (window.scrollY > 300) {
+      backToTopBtn.style.display = "block";
+      backToTopBtn.style.opacity = "1";
+    } else {
+      backToTopBtn.style.opacity = "0";
+      setTimeout(() => {
+        if (window.scrollY <= 300) {
+          backToTopBtn.style.display = "none";
+        }
+      }, 300);
+    }
+  }
 }, 10);
 
 window.addEventListener("scroll", debouncedScrollHandler);
@@ -367,7 +534,7 @@ function safeQuerySelector(selector) {
 
 // Console message for developers
 console.log(
-  "%cPrime Logistics Solutions",
+  "%cCityLinx Logistics",
   "color: #2563eb; font-size: 20px; font-weight: bold;"
 );
 console.log(
@@ -375,14 +542,14 @@ console.log(
   "color: #059669; font-size: 14px;"
 );
 
-const map = L.map("leaflet-map").setView([36.8354, -76.2983], 13);
+const map = L.map("leaflet-map").setView([42.8666, -106.3131], 13);
 
 L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
   maxZoom: 19,
   attribution: "&copy; OpenStreetMap contributors",
 }).addTo(map);
 
-const marker = L.marker([36.8354, -76.2983])
+const marker = L.marker([42.8666, -106.3131])
   .addTo(map)
-  .bindPopup("<b>CITY LOGISTICS LLC</b><br>Portsmouth, VA 23707")
+  .bindPopup("<b>CITYLINX LLC</b><br>Casper, WY 82601")
   .openPopup();

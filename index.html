@@ -3,9 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>
-      Prime Logistics Solutions - Professional Freight & Shipping Services
-    </title>
+    <title>CityLinx - Professional Freight & Shipping Services</title>
     <meta
       name="description"
       content="Leading logistics brokerage company providing freight solutions, shipping services, and transportation management across North America."
@@ -20,6 +18,11 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
       rel="stylesheet"
     />
   </head>
@@ -38,31 +41,125 @@
           <li><a href="index.html" class="nav-home">HOME</a></li>
           <li><a href="about.html" class="nav-link">ABOUT US</a></li>
           <li><a href="services.html" class="nav-link">OUR SERVICES</a></li>
-          <li><a href="services.html" class="nav-link">BECOME A CARRIER</a></li>
+          <li>
+            <a href="become-a-carrier.html" class="nav-link"
+              >BECOME A CARRIER</a
+            >
+          </li>
           <li><a href="contact.html" class="nav-link">CONTACT US</a></li>
         </div>
-        <div class="nav-toggle" id="nav-toggle">
-          <span class="bar"></span>
-          <span class="bar"></span>
-          <span class="bar"></span>
-        </div>
+       
       </div>
     </nav>
 
     <!-- Hero Section -->
-    <section class="hero">
-      <div class="img">
-        <div class="heading">
-          <h2>
-            We operate across the country<br /><span class="subheading"
-              >– all 48 states of USA and Canada</span
-            >
-          </h2>
-          <button class="btn-learn-more">
-            <a href="#about">LEARN MORE</a>
-          </button>
-        </div>
+    <section class="relative w-full h-screen overflow-hidden">
+      <!-- Slider Container -->
+      <div
+        id="videoSlider"
+        class="flex transition-transform duration-1000 ease-in-out"
+      >
+        <video
+          class="w-full h-screen object-cover flex-shrink-0"
+          src="videos/Ocean-Freight-SS.mp4"
+          autoplay
+          muted
+        ></video>
+        <video
+          class="w-full h-screen object-cover flex-shrink-0"
+          src="videos/Trucking-SS.mp4"
+          muted
+        ></video>
+        <video
+          class="w-full h-screen object-cover flex-shrink-0"
+          src="videos/Warehousing-SS.mp4"
+          muted
+        ></video>
       </div>
+
+      <!-- Overlay Text -->
+      <div
+        class="absolute inset-0 bg-black/50 flex flex-col items-center justify-center text-center px-4"
+        style="font-family: 'Roboto', sans-serif; text-transform: capitalize"
+      >
+        <div class="mb-[30px] mt-[90px]">
+          <h2
+            id="mainHeading"
+            class="text-[48px] md:text-[72px] mt-[200px] font-[400] text-white mb-2 leading-tight"
+          >
+            Fast & Secure Logistics
+          </h2>
+          <h3
+            id="subHeading"
+            class="text-2xl md:text-4xl text-white font-semibold"
+          >
+            For All Your Needs
+          </h3>
+        </div>
+
+        <!-- Underline Buttons -->
+        <div class="flex flex-wrap gap-10 mt-10 text-start text-white bg-cover bg-center h-[50px]" style="background-image: url('path-to-your-background-image.jpg');">
+  <button
+    id="btn1"
+    class="nav-btn inline-block text-start pb-2 border-b-5 border-yellow-400 font-semibold text-2xl leading-[32px] transition-all duration-300 hover:text-yellow-400 relative text-white"
+  >
+    Ocean Freight
+  </button>
+  <button
+    id="btn2"
+    class="nav-btn inline-block text-start pb-2 border-b-5 border-transparent font-semibold text-2xl leading-[32px] transition-all duration-300 hover:border-yellow-400 hover:text-yellow-400 relative text-white"
+  >
+    Land Freight
+  </button>
+  <button
+    id="btn3"
+    class="nav-btn inline-block text-start pb-2 border-b-5 border-transparent font-semibold text-2xl leading-[32px] transition-all duration-300 hover:border-yellow-400 hover:text-yellow-400 relative text-white"
+  >
+    Warehousing
+  </button>
+</div>
+      </div>
+
+      <!-- Arrows -->
+      <button
+        id="prevBtn"
+        class="absolute left-3 top-1/2 -translate-y-1/2 text-white p-3 rounded-full transition hover:scale-110"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="w-10 h-10 md:w-12 md:h-12"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M15 19l-7-7 7-7"
+          />
+        </svg>
+      </button>
+
+      <button
+        id="nextBtn"
+        class="absolute right-3 top-1/2 -translate-y-1/2 text-white p-3 rounded-full transition hover:scale-110"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="w-10 h-10 md:w-12 md:h-12"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M9 5l7 7-7 7"
+          />
+        </svg>
+      </button>
     </section>
 
     <!-- Welcome / Intro Section (added) -->
@@ -77,7 +174,7 @@
             >
               Welcome to
             </p>
-            <h2 class="text-4xl font-bold text-center">CITY LOGISTICS LLC</h2>
+            <h2 class="text-4xl font-bold text-center">CITYLINX LLC</h2>
           </div>
           <p class="text-start font-semibold text-black leading-8">
             We as freight brokers work as a liaison between shippers and
@@ -102,10 +199,11 @@
         <div class="flex justify-between gap-5">
           <div class="w-[350px]">
             <div class="">
-              <a href="drayage.html"><img 
-                src="images/43645747_s.jpg"
-                class="h-[300px] w-full object-cover"
-                alt="Freight Brokerage"
+              <a href="drayage.html"
+                ><img
+                  src="images/43645747_s.jpg"
+                  class="h-[300px] w-full object-cover"
+                  alt="Freight Brokerage"
               /></a>
             </div>
             <div class="">
@@ -119,10 +217,11 @@
           </div>
           <div class="w-[350px]">
             <div class="">
-              <a href="otr-over-the-road.html"><img
-                src="images/service2.jpg"
-                alt="Shipping Solutions"
-                class="h-[300px] w-full object-cover"
+              <a href="otr-over-the-road.html"
+                ><img
+                  src="images/service2.jpg"
+                  alt="Shipping Solutions"
+                  class="h-[300px] w-full object-cover"
               /></a>
             </div>
             <div class="">
@@ -138,10 +237,11 @@
           </div>
           <div class="w-[350px]">
             <div class="">
-             <a href="warehousing-and-transloading.html"><img
-                src="images/175890416_s.jpg"
-                class="h-[300px] w-full object-cover"
-                alt="Logistics Management"
+              <a href="warehousing-and-transloading.html"
+                ><img
+                  src="images/175890416_s.jpg"
+                  class="h-[300px] w-full object-cover"
+                  alt="Logistics Management"
               /></a>
             </div>
             <div class="">
@@ -162,20 +262,6 @@
         </div>
       </div>
     </section>
-
-    <!-- CTA Section -->
-    <!-- <section class="cta-section">
-      <div class="container">
-        <div class="cta-content">
-          <h2>Ready to Optimize Your Logistics?</h2>
-          <p>
-            Get a free quote today and discover how we can streamline your
-            transportation needs.
-          </p>
-          <a href="contact.html" class="btn btn-white">Get Free Quote</a>
-        </div>
-      </div>
-    </section> -->
     <section class="bg-[#E8EAF0]">
       <div class="flex justify-center items-center gap-x-4 pt-20">
         <img src="images/modal.jpg" class="h-[300px] w-[600px]" />
@@ -198,7 +284,7 @@
       >
         <!-- Card 1 -->
         <div
-          class="bg-[#2C3674] h-[268px] w-full max-w-[300px] flex flex-col justify-center items-center text-white font-bold text-2xl uppercase text-center rounded-2xl shadow-lg transition-transform duration-300 hover:scale-105 hover:shadow-2xl"
+          class="bg-[#2C3674] h-[268px] w-full max-w-[300px] flex flex-col justify-center items-center text-white font-bold text-2xl uppercase text-center rounded-2xl shadow-lg transition-transform duration-300 hover:scale-105 hover:shadow-2xl relative"
         >
           <img
             src="images/icon1.png"
@@ -206,11 +292,26 @@
             class="mb-3 w-16 h-16 object-contain"
           />
           <p>Container<br />Drayage</p>
+          <div class="absolute bottom-4 right-4">
+            <svg
+              class="w-6 h-6 text-white opacity-70"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M9 5l7 7-7 7"
+              ></path>
+            </svg>
+          </div>
         </div>
 
         <!-- Card 2 -->
         <div
-          class="bg-[#E8002C] h-[268px] w-full max-w-[300px] flex flex-col justify-center items-center text-white font-bold text-2xl uppercase text-center rounded-2xl shadow-lg transition-transform duration-300 hover:scale-105 hover:shadow-2xl"
+          class="bg-[#E8002C] h-[268px] w-full max-w-[300px] flex flex-col justify-center items-center text-white font-bold text-2xl uppercase text-center rounded-2xl shadow-lg transition-transform duration-300 hover:scale-105 hover:shadow-2xl relative"
         >
           <img
             src="images/icon2.png"
@@ -218,11 +319,26 @@
             class="mb-3 w-16 h-16 object-contain"
           />
           <p>Full Truck<br />Load (FTL)</p>
+          <div class="absolute bottom-4 right-4">
+            <svg
+              class="w-6 h-6 text-white opacity-70"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M9 5l7 7-7 7"
+              ></path>
+            </svg>
+          </div>
         </div>
 
         <!-- Card 3 -->
         <div
-          class="bg-[#2C3674] h-[268px] w-full max-w-[300px] flex flex-col justify-center items-center text-white font-bold text-2xl uppercase text-center rounded-2xl shadow-lg transition-transform duration-300 hover:scale-105 hover:shadow-2xl"
+          class="bg-[#2C3674] h-[268px] w-full max-w-[300px] flex flex-col justify-center items-center text-white font-bold text-2xl uppercase text-center rounded-2xl shadow-lg transition-transform duration-300 hover:scale-105 hover:shadow-2xl relative"
         >
           <img
             src="images/icon3.png"
@@ -230,11 +346,26 @@
             class="mb-3 w-16 h-16 object-contain"
           />
           <p>Less Than<br />Truck Load (LTL)</p>
+          <div class="absolute bottom-4 right-4">
+            <svg
+              class="w-6 h-6 text-white opacity-70"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M9 5l7 7-7 7"
+              ></path>
+            </svg>
+          </div>
         </div>
 
         <!-- Card 4 -->
         <div
-          class="bg-[#E8002C] h-[268px] w-full max-w-[300px] flex flex-col justify-center items-center text-white font-bold text-2xl uppercase text-center rounded-2xl shadow-lg transition-transform duration-300 hover:scale-105 hover:shadow-2xl"
+          class="bg-[#E8002C] h-[268px] w-full max-w-[300px] flex flex-col justify-center items-center text-white font-bold text-2xl uppercase text-center rounded-2xl shadow-lg transition-transform duration-300 hover:scale-105 hover:shadow-2xl relative"
         >
           <img
             src="images/icon4.png"
@@ -242,11 +373,26 @@
             class="mb-3 w-16 h-16 object-contain"
           />
           <p>Palletize and<br />Shrink Wrap</p>
+          <div class="absolute bottom-4 right-4">
+            <svg
+              class="w-6 h-6 text-white opacity-70"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M9 5l7 7-7 7"
+              ></path>
+            </svg>
+          </div>
         </div>
 
         <!-- Repeat for remaining cards -->
         <div
-          class="bg-[#2C3674] h-[268px] w-full max-w-[300px] flex flex-col justify-center items-center text-white font-bold text-2xl uppercase text-center rounded-2xl shadow-lg transition-transform duration-300 hover:scale-105 hover:shadow-2xl"
+          class="bg-[#2C3674] h-[268px] w-full max-w-[300px] flex flex-col justify-center items-center text-white font-bold text-2xl uppercase text-center rounded-2xl shadow-lg transition-transform duration-300 hover:scale-105 hover:shadow-2xl relative"
         >
           <img
             src="images/icon5.png"
@@ -254,9 +400,24 @@
             class="mb-3 w-16 h-16 object-contain"
           />
           <p>Transloading</p>
+          <div class="absolute bottom-4 right-4">
+            <svg
+              class="w-6 h-6 text-white opacity-70"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M9 5l7 7-7 7"
+              ></path>
+            </svg>
+          </div>
         </div>
         <div
-          class="bg-[#E8002C] h-[268px] w-full max-w-[300px] flex flex-col justify-center items-center text-white font-bold text-2xl uppercase text-center rounded-2xl shadow-lg transition-transform duration-300 hover:scale-105 hover:shadow-2xl"
+          class="bg-[#E8002C] h-[268px] w-full max-w-[300px] flex flex-col justify-center items-center text-white font-bold text-2xl uppercase text-center rounded-2xl shadow-lg transition-transform duration-300 hover:scale-105 hover:shadow-2xl relative"
         >
           <img
             src="images/icon6.png"
@@ -264,9 +425,24 @@
             class="mb-3 w-16 h-16 object-contain"
           />
           <p>Reefer Containers/<br />Trailers</p>
+          <div class="absolute bottom-4 right-4">
+            <svg
+              class="w-6 h-6 text-white opacity-70"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M9 5l7 7-7 7"
+              ></path>
+            </svg>
+          </div>
         </div>
         <div
-          class="bg-[#2C3674] h-[268px] w-full max-w-[300px] flex flex-col justify-center items-center text-white font-bold text-2xl uppercase text-center rounded-2xl shadow-lg transition-transform duration-300 hover:scale-105 hover:shadow-2xl"
+          class="bg-[#2C3674] h-[268px] w-full max-w-[300px] flex flex-col justify-center items-center text-white font-bold text-2xl uppercase text-center rounded-2xl shadow-lg transition-transform duration-300 hover:scale-105 hover:shadow-2xl relative"
         >
           <img
             src="images/icon7.png"
@@ -274,9 +450,24 @@
             class="mb-3 w-16 h-16 object-contain"
           />
           <p>Alcohol<br />Permits</p>
+          <div class="absolute bottom-4 right-4">
+            <svg
+              class="w-6 h-6 text-white opacity-70"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M9 5l7 7-7 7"
+              ></path>
+            </svg>
+          </div>
         </div>
         <div
-          class="bg-[#E8002C] h-[268px] w-full max-w-[300px] flex flex-col justify-center items-center text-white font-bold text-2xl uppercase text-center rounded-2xl shadow-lg transition-transform duration-300 hover:scale-105 hover:shadow-2xl"
+          class="bg-[#E8002C] h-[268px] w-full max-w-[300px] flex flex-col justify-center items-center text-white font-bold text-2xl uppercase text-center rounded-2xl shadow-lg transition-transform duration-300 hover:scale-105 hover:shadow-2xl relative"
         >
           <img
             src="images/icon8.png"
@@ -284,9 +475,24 @@
             class="mb-3 w-16 h-16 object-contain"
           />
           <p>Airport<br />Pickups</p>
+          <div class="absolute bottom-4 right-4">
+            <svg
+              class="w-6 h-6 text-white opacity-70"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M9 5l7 7-7 7"
+              ></path>
+            </svg>
+          </div>
         </div>
         <div
-          class="bg-[#2C3674] h-[268px] w-full max-w-[300px] flex flex-col justify-center items-center text-white font-bold text-2xl uppercase text-center rounded-2xl shadow-lg transition-transform duration-300 hover:scale-105 hover:shadow-2xl"
+          class="bg-[#2C3674] h-[268px] w-full max-w-[300px] flex flex-col justify-center items-center text-white font-bold text-2xl uppercase text-center rounded-2xl shadow-lg transition-transform duration-300 hover:scale-105 hover:shadow-2xl relative"
         >
           <img
             src="images/icon9.png"
@@ -294,9 +500,24 @@
             class="mb-3 w-16 h-16 object-contain"
           />
           <p>Container<br />Storage</p>
+          <div class="absolute bottom-4 right-4">
+            <svg
+              class="w-6 h-6 text-white opacity-70"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M9 5l7 7-7 7"
+              ></path>
+            </svg>
+          </div>
         </div>
         <div
-          class="bg-[#E8002C] h-[268px] w-full max-w-[300px] flex flex-col justify-center items-center text-white font-bold text-2xl uppercase text-center rounded-2xl shadow-lg transition-transform duration-300 hover:scale-105 hover:shadow-2xl"
+          class="bg-[#E8002C] h-[268px] w-full max-w-[300px] flex flex-col justify-center items-center text-white font-bold text-2xl uppercase text-center rounded-2xl shadow-lg transition-transform duration-300 hover:scale-105 hover:shadow-2xl relative"
         >
           <img
             src="images/icon10.png"
@@ -304,9 +525,24 @@
             class="mb-3 w-16 h-16 object-contain"
           />
           <p>Export<br />Stuffing</p>
+          <div class="absolute bottom-4 right-4">
+            <svg
+              class="w-6 h-6 text-white opacity-70"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M9 5l7 7-7 7"
+              ></path>
+            </svg>
+          </div>
         </div>
         <div
-          class="bg-[#2C3674] h-[268px] w-full max-w-[300px] flex flex-col justify-center items-center text-white font-bold text-2xl uppercase text-center rounded-2xl shadow-lg transition-transform duration-300 hover:scale-105 hover:shadow-2xl"
+          class="bg-[#2C3674] h-[268px] w-full max-w-[300px] flex flex-col justify-center items-center text-white font-bold text-2xl uppercase text-center rounded-2xl shadow-lg transition-transform duration-300 hover:scale-105 hover:shadow-2xl relative"
         >
           <img
             src="images/icon11.png"
@@ -314,9 +550,24 @@
             class="mb-3 w-16 h-16 object-contain"
           />
           <p>Hazmat</p>
+          <div class="absolute bottom-4 right-4">
+            <svg
+              class="w-6 h-6 text-white opacity-70"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M9 5l7 7-7 7"
+              ></path>
+            </svg>
+          </div>
         </div>
         <div
-          class="bg-[#E8002C] h-[268px] w-full max-w-[300px] flex flex-col justify-center items-center text-white font-bold text-2xl uppercase text-center rounded-2xl shadow-lg transition-transform duration-300 hover:scale-105 hover:shadow-2xl"
+          class="bg-[#E8002C] h-[268px] w-full max-w-[300px] flex flex-col justify-center items-center text-white font-bold text-2xl uppercase text-center rounded-2xl shadow-lg transition-transform duration-300 hover:scale-105 hover:shadow-2xl relative"
         >
           <img
             src="images/icon12.png"
@@ -324,10 +575,25 @@
             class="mb-3 w-16 h-16 object-contain"
           />
           <p>Flatbed</p>
+          <div class="absolute bottom-4 right-4">
+            <svg
+              class="w-6 h-6 text-white opacity-70"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M9 5l7 7-7 7"
+              ></path>
+            </svg>
+          </div>
         </div>
 
         <div
-          class="bg-[#2C3674] h-[268px] w-full max-w-[300px] flex flex-col justify-center items-center text-white font-bold text-2xl uppercase text-center rounded-2xl shadow-lg transition-transform duration-300 hover:scale-105 hover:shadow-2xl"
+          class="bg-[#2C3674] h-[268px] w-full max-w-[300px] flex flex-col justify-center items-center text-white font-bold text-2xl uppercase text-center rounded-2xl shadow-lg transition-transform duration-300 hover:scale-105 hover:shadow-2xl relative"
         >
           <img
             src="images/icon13.png"
@@ -335,9 +601,24 @@
             class="mb-3 w-16 h-16 object-contain"
           />
           <p>Partials</p>
+          <div class="absolute bottom-4 right-4">
+            <svg
+              class="w-6 h-6 text-white opacity-70"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M9 5l7 7-7 7"
+              ></path>
+            </svg>
+          </div>
         </div>
         <div
-          class="bg-[#E8002C] h-[268px] w-full max-w-[300px] flex flex-col justify-center items-center text-white font-bold text-2xl uppercase text-center rounded-2xl shadow-lg transition-transform duration-300 hover:scale-105 hover:shadow-2xl"
+          class="bg-[#E8002C] h-[268px] w-full max-w-[300px] flex flex-col justify-center items-center text-white font-bold text-2xl uppercase text-center rounded-2xl shadow-lg transition-transform duration-300 hover:scale-105 hover:shadow-2xl relative"
         >
           <img
             src="images/icon14.png"
@@ -345,6 +626,21 @@
             class="mb-3 w-16 h-16 object-contain"
           />
           <p>Overweight</p>
+          <div class="absolute bottom-4 right-4">
+            <svg
+              class="w-6 h-6 text-white opacity-70"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M9 5l7 7-7 7"
+              ></path>
+            </svg>
+          </div>
         </div>
       </div>
     </section>
@@ -363,7 +659,7 @@
           </h1>
 
           <p class="text-[#FFD60A] font-semibold text-base sm:text-lg">
-            ✉️ clark@citylogisticsusa.com
+            ✉️ clark@citylinx.com
           </p>
 
           <div class="flex flex-wrap justify-center gap-4">
@@ -412,17 +708,15 @@
         <img src="images/transportation.jpg" class="h-[300px] w-[600px]" />
       </div> -->
     </section>
-    
-     
 
-  <!-- BACK TO TOP BUTTON -->
-  <button
-    onclick="window.scrollTo({top: 0, behavior: 'smooth'})"
-    class="fixed bottom-5 right-5 bg-[#E8002C] text-white p-3 rounded-full shadow-lg hover:bg-[#c10024] transition"
-    title="Back to top">
-  </button>
+    <!-- BACK TO TOP BUTTON -->
+    <button
+      onclick="window.scrollTo({top: 0, behavior: 'smooth'})"
+      class="fixed bottom-5 right-5 bg-[#E8002C] text-white p-3 rounded-full shadow-lg hover:bg-[#c10024] transition"
+      title="Back to top"
+    ></button>
 
-  <footer class="bg-indigo-900 text-white py-8">
+    <footer class="bg-indigo-900 text-white py-8">
       <div class="container mx-auto px-4">
         <!-- Main Footer Content -->
         <div
@@ -494,10 +788,10 @@
                 <i data-lucide="phone" class="w-5 h-5 text-red-500"></i>
                 <span>Phone: </span>
                 <a
-                  href="tel:+17573566404"
+                  href="tel:+13072345678"
                   class="transition-colors duration-300 ease-in-out hover:text-red-500 cursor-pointer"
                 >
-                  (757) 356-6404 ext: 1001
+                  (307) 234-5678 ext: 1001
                 </a>
               </li>
 
@@ -506,10 +800,10 @@
                 <i data-lucide="mail" class="w-5 h-5 text-red-500"></i>
                 <span>E-mail: </span>
                 <a
-                  href="mailto:clark@citylogisticsusa.com"
+                  href="mailto:clark@citylinx.com"
                   class="transition-colors duration-300 ease-in-out hover:text-red-500 cursor-pointer"
                 >
-                  clark@citylogisticsusa.com
+                  clark@citylinx.com
                 </a>
               </li>
 
@@ -517,10 +811,10 @@
               <li class="flex items-center space-x-2">
                 <i data-lucide="mail" class="w-5 h-5 text-red-500"></i>
                 <a
-                  href="mailto:admin@citylogisticsusa.com"
+                  href="mailto:admin@citylinx.com"
                   class="transition-colors duration-300 ease-in-out hover:text-red-500 cursor-pointer"
                 >
-                  admin@citylogisticsusa.com
+                  admin@citylinx.com
                 </a>
               </li>
 
@@ -528,11 +822,11 @@
               <li class="flex items-center space-x-2">
                 <i data-lucide="map-pin" class="w-5 h-5 text-red-500"></i>
                 <a
-                  href="https://maps.google.com/?q=Portsmouth, VA 23707, USA"
+                  href="https://maps.google.com/?q=Casper, WY 82601, USA"
                   target="_blank"
                   class="transition-colors duration-300 ease-in-out hover:text-red-500 cursor-pointer"
                 >
-                  Portsmouth, VA 23707, USA
+                  Casper, WY 82601, USA
                 </a>
               </li>
             </ul>
@@ -581,12 +875,35 @@
             class="text-left flex-grow font-light"
             style="font-family: 'Josefin Sans', sans-serif"
           >
-            <p>© Copyright 2025, CITY LOGISTICS LLC | SITE MAP</p>
+            <p>© Copyright 2025, CITYLINX LLC | SITE MAP</p>
             <p>WEBSITE DESIGN | WEBCREATIONUS.COM</p>
           </div>
         </div>
       </div>
     </footer>
+
+    <!-- Back to Top Button -->
+    <button
+      onclick="window.scrollTo({top: 0, behavior: 'smooth'})"
+      class="back-to-top-btn fixed bottom-5 right-5 bg-[#ed1e28] text-white p-3 rounded-full shadow-lg hover:bg-[#d61a22] transition-all duration-300 z-50"
+      style="display: none; opacity: 0"
+      title="Back to top"
+    >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke-width="2"
+        stroke="currentColor"
+        class="w-6 h-6"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M4.5 15.75l7.5-7.5 7.5 7.5"
+        />
+      </svg>
+    </button>
 
     <script src="js/main.js"></script>
   </body>
