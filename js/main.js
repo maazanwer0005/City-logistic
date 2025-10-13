@@ -1,79 +1,26 @@
-// const slider = document.getElementById("videoSlider");
-// const videos = slider.querySelectorAll("video");
-// const total = videos.length;
-// const btns = [btn1, btn2, btn3];
-// const mainHeading = document.getElementById("mainHeading");
-// const subHeading = document.getElementById("subHeading");
-// const nextBtn = document.getElementById("nextBtn");
-// const prevBtn = document.getElementById("prevBtn");
+const track = document.getElementById("carousel-track");
+const slides = track.children.length;
+let carouselIndex = 0;
 
-// // Text content for each slide
-// const textData = [
-//   { h2: "Fast & Secure Logistics", h3: "For All Your Needs" },
-//   { h2: "Delivering Excellence with", h3: "Passion and Innovation" },
-//   { h2: "Multimodal Warehousing Solution", h3: "Seamless. Faster. Safer." },
-// ];
+function showSlide(i) {
+  track.style.transform = `translateX(-${i * 15}%)`;
+}
 
-// let index = 0;
-// let timer;
+document.getElementById("next").onclick = () => {
+  carouselIndex = (carouselIndex + 1) ;
+  showSlide(carouselIndex);
+};
 
-// function updateSlider() {
-//   // slide move
-//   slider.style.transform = `translateX(-${index * 100}%)`;
-//   // pause all videos
-//   videos.forEach((v) => {
-//     v.pause();
-//     v.currentTime = 0;
-//   });
-//   // play active video
-//   videos[index].play();
-//   // update text
-//   mainHeading.textContent = textData[index].h2;
-//   subHeading.textContent = textData[index].h3;
-//   // underline active button
-//   btns.forEach((b, i) => {
-//     b.classList.remove("border-b-4", "border-yellow-400");
-//     b.classList.add("border-b-2", "border-transparent");
-//     if (i === index) {
-//       b.classList.remove("border-b-2", "border-transparent");
-//       b.classList.add("border-b-4", "border-yellow-400");
-//     }
-//   });
-// }
+document.getElementById("prev").onclick = () => {
+  carouselIndex = (carouselIndex - 1 + slides) % slides;
+  showSlide(carouselIndex);
+};
 
-// function startAutoPlay() {
-//   clearInterval(timer);
-//   timer = setInterval(() => {
-//     index = (index + 1) % total;
-//     updateSlider();
-//   }, 15000); // 15 seconds
-// }
-
-// // Buttons click
-// btns.forEach((b, i) => {
-//   b.addEventListener("click", () => {
-//     index = i;
-//     updateSlider();
-//     startAutoPlay();
-//   });
-// });
-
-// // Arrows click
-// nextBtn.addEventListener("click", () => {
-//   index = (index + 1) % total;
-//   updateSlider();
-//   startAutoPlay();
-// });
-
-// prevBtn.addEventListener("click", () => {
-//   index = (index - 1 + total) % total;
-//   updateSlider();
-//   startAutoPlay();
-// });
-
-// // init
-// updateSlider();
-// startAutoPlay(); // Main JavaScript for Prime Logistics Solutions Website
+// Auto slide every 7 seconds
+setInterval(() => {
+  carouselIndex = (carouselIndex + 1) % slides;
+  showSlide(carouselIndex);
+}, 7000);
 
 const slider = document.getElementById("videoSlider");
 const videos = slider.querySelectorAll("video");
@@ -86,9 +33,21 @@ const prevBtn = document.getElementById("prevBtn");
 
 // Text content for each slide
 const textData = [
-  { h2: "Fast & Secure Logistics", h3: "For All Your Needs" , h2size: "text-[40px]" },
-  { h2: "Delivering Excellence with", h3: "Passion and Innovation" , h2size: "text-[80px]" },
-  { h2: "Multimodal Warehousing Solution" , h3: "Seamless. Faster. Safer." , h2size: "text-[10px]" },
+  {
+    h2: "Fast & Secure Logistics",
+    h3: "For All Your Needs",
+    h2size: "text-[40px]",
+  },
+  {
+    h2: "Delivering Excellence with",
+    h3: "Passion and Innovation",
+    h2size: "text-[80px]",
+  },
+  {
+    h2: "Multimodal Warehousing Solution",
+    h3: "Seamless. Faster. Safer.",
+    h2size: "text-[10px]",
+  },
 ];
 
 let index = 0;

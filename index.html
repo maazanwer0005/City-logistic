@@ -21,6 +21,11 @@
       rel="stylesheet"
     />
     <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      .carousel-track {
+        transition: transform 0.6s ease-in-out;
+      }
+    </style>
     <link
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
       rel="stylesheet"
@@ -48,7 +53,6 @@
           </li>
           <li><a href="contact.html" class="nav-link">CONTACT US</a></li>
         </div>
-       
       </div>
     </nav>
 
@@ -98,26 +102,29 @@
         </div>
 
         <!-- Underline Buttons -->
-        <div class="flex flex-wrap gap-10 mt-10 text-start text-white bg-cover bg-center h-[50px]" style="background-image: url('path-to-your-background-image.jpg');">
-  <button
-    id="btn1"
-    class="nav-btn inline-block text-start pb-2 border-b-5 border-yellow-400 font-semibold text-2xl leading-[32px] transition-all duration-300 hover:text-yellow-400 relative text-white"
-  >
-    Ocean Freight
-  </button>
-  <button
-    id="btn2"
-    class="nav-btn inline-block text-start pb-2 border-b-5 border-transparent font-semibold text-2xl leading-[32px] transition-all duration-300 hover:border-yellow-400 hover:text-yellow-400 relative text-white"
-  >
-    Land Freight
-  </button>
-  <button
-    id="btn3"
-    class="nav-btn inline-block text-start pb-2 border-b-5 border-transparent font-semibold text-2xl leading-[32px] transition-all duration-300 hover:border-yellow-400 hover:text-yellow-400 relative text-white"
-  >
-    Warehousing
-  </button>
-</div>
+        <div
+          class="flex flex-wrap gap-10 mt-10 text-start text-white bg-cover bg-center h-[50px]"
+          style="background-image: url('path-to-your-background-image.jpg')"
+        >
+          <button
+            id="btn1"
+            class="nav-btn inline-block text-start pb-2 border-b-5 border-yellow-400 font-semibold text-2xl leading-[32px] transition-all duration-300 hover:text-yellow-400 relative text-white"
+          >
+            Ocean Freight
+          </button>
+          <button
+            id="btn2"
+            class="nav-btn inline-block text-start pb-2 border-b-5 border-transparent font-semibold text-2xl leading-[32px] transition-all duration-300 hover:border-yellow-400 hover:text-yellow-400 relative text-white"
+          >
+            Land Freight
+          </button>
+          <button
+            id="btn3"
+            class="nav-btn inline-block text-start pb-2 border-b-5 border-transparent font-semibold text-2xl leading-[32px] transition-all duration-300 hover:border-yellow-400 hover:text-yellow-400 relative text-white"
+          >
+            Warehousing
+          </button>
+        </div>
       </div>
 
       <!-- Arrows -->
@@ -187,6 +194,122 @@
         </div>
       </div>
     </section>
+    <h2 class="text-4xl ml-20 mb-8">We Serve The Following Industry</h2>
+
+    <div class="relative w-full max-w-6xl mx-auto overflow-hidden py-20">
+      <!-- Carousel Track -->
+      <div
+        id="carousel-track"
+        class="flex transition-transform duration-700 ease-in-out"
+      >
+        <!-- Slide 1 -->
+        <div class="min-w-full flex justify-center gap-[70px] flex-wrap">
+          <div>
+            <img
+              src="https://www.sandsbrokerageinc.com/wp-content/uploads/2023/03/serve1.webp"
+              class="mx-auto"
+            />
+            <p class="text-center mt-2">Heavy Equipment</p>
+          </div>
+          <div>
+            <img
+              src="https://www.sandsbrokerageinc.com/wp-content/uploads/2023/03/serve2.webp"
+              class="mx-auto"
+            />
+            <p class="text-center mt-2">Freight Shipping</p>
+          </div>
+          <div>
+            <img
+              src="https://www.sandsbrokerageinc.com/wp-content/uploads/2023/03/serve3.webp"
+              class="mx-auto"
+            />
+            <p class="text-center mt-2">Hardware Supplies</p>
+          </div>
+          <div>
+            <img
+              src="https://www.sandsbrokerageinc.com/wp-content/uploads/2023/03/serve4.webp"
+              class="mx-auto"
+            />
+            <p class="text-center mt-2">Boat Support</p>
+          </div>
+          <div>
+            <img
+              src="https://www.sandsbrokerageinc.com/wp-content/uploads/2023/03/serve5.webp"
+              class="mx-auto"
+            />
+            <p class="text-center mt-2">Solar Panels</p>
+          </div>
+          <div>
+            <img
+              src="https://www.sandsbrokerageinc.com/wp-content/uploads/2023/03/serve6.webp"
+              class="mx-auto"
+            />
+            <p class="text-center mt-2">Aerospace</p>
+          </div>
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="min-w-full flex justify-center gap-[70px] flex-wrap">
+          <div>
+            <img
+              src="	https://www.sandsbrokerageinc.com/wp-content/uploads/2023/03/serve7.webp"
+              class="mx-auto"
+            />
+            <p class="text-center mt-2">Trailer</p>
+          </div>
+          <div>
+            <img
+              src="https://www.sandsbrokerageinc.com/wp-content/uploads/2023/03/serve5.webp"
+              class="mx-auto"
+            />
+            <p class="text-center mt-2">Solar Panels</p>
+          </div>
+          <div>
+            <img
+              src="https://www.sandsbrokerageinc.com/wp-content/uploads/2023/03/serve1.webp"
+              class="mx-auto"
+            />
+            <p class="text-center mt-2">Heavy Equipment</p>
+          </div>
+          <div>
+            <img
+              src="https://www.sandsbrokerageinc.com/wp-content/uploads/2023/03/serve2.webp"
+              class="mx-auto"
+            />
+            <p class="text-center mt-2">Freight Shipping</p>
+          </div>
+          <div>
+            <img
+              src="https://www.sandsbrokerageinc.com/wp-content/uploads/2023/03/serve3.webp"
+              class="mx-auto"
+            />
+            <p class="text-center mt-2">Hardware Supplies</p>
+          </div>
+          <div>
+            <img
+              src="https://www.sandsbrokerageinc.com/wp-content/uploads/2023/03/serve4.webp"
+              class="mx-auto"
+            />
+            <p class="text-center mt-2">Boat Support</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Navigation Buttons -->
+      <button
+        id="prev"
+        class="absolute left-3 top-1/2 -translate-y-1/2 bg-gray-100 hover:bg-gray-300 p-2 rounded-full shadow"
+      >
+        &#8249;
+      </button>
+      <button
+        id="next"
+        class="absolute right-3 top-1/2 -translate-y-1/2 bg-gray-100 hover:bg-gray-300 p-2 rounded-full shadow"
+      >
+        &#8250;
+      </button>
+    </div>
+
     <!-- Services Preview -->
     <section class="bg-[#E8EAF0] px-[100px]">
       <div class="">
@@ -738,14 +861,14 @@
               <li>
                 <a
                   href="index.html"
-                  class="text-white hover:text-red-500 transition-colors duration-150 ease-in-out"
+                  class="text-red-500 font-semibold transition-colors duration-150 ease-in-outt"
                   >Home</a
                 >
               </li>
               <li>
                 <a
                   href="about.html"
-                  class="text-red-500 font-semibold transition-colors duration-150 ease-in-out"
+                  class="text-white hover:text-red-500 transition-colors duration-150 ease-in-ou"
                   >About Us</a
                 >
               </li>
