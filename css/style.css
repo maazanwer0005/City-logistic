@@ -1,4 +1,3 @@
-/* Orange Learn More Button */
 .btn-learn-more {
   border-color: #ed1e28 !important;
   background-color: #ed1e28 !important;
@@ -39,7 +38,7 @@ a {
   background-color: #e8002c !important;
   color: #fff !important;
 }
-/* Reset and Base Styles */
+
 * {
   margin: 0;
   padding: 0;
@@ -64,7 +63,6 @@ body {
   padding: 0 20px;
 }
 
-/* Typography */
 h1,
 h2,
 h3,
@@ -95,7 +93,6 @@ p {
   color: #666;
 }
 
-/* Buttons */
 .btn {
   display: inline-block;
   padding: 12px 30px;
@@ -166,7 +163,6 @@ p {
   color: #2563eb;
 }
 
-/* Navigation */
 .navbar {
   background-color: #DFDFDF;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
@@ -227,7 +223,7 @@ p {
   font-family: "Josefin Sans", sans-serif;
   transition: all 0.3s ease;
   position: relative;
-  padding: 16px 25px; /* add consistent padding */
+  padding: 16px 25px;
   border-radius: 28px;
 }
 
@@ -248,7 +244,7 @@ li {
 .nav-link:hover {
   background: #ed1e28;
   color: #fff;
-  transform: scale(1.1); /* smooth hover effect without shifting layout */
+  transform: scale(1.1);
 }
 
 
@@ -269,7 +265,6 @@ li {
 
 .img {
   background-image: url("../images/banner1.jpg");
-  /* background-position: center center; */
   background-size: cover;
   background-repeat: no-repeat;
   width: 100%;
@@ -282,10 +277,7 @@ li {
 }
 
 .heading {
-  /* display: grid; */
   justify-content: center;
-  /* flex-direction: row; */
-  /* row-gap: 35px; */
 }
 
 .heading > h2 {
@@ -316,14 +308,10 @@ li {
 }
 
 .hero {
-  /* background: url("../images/banner1.jpg") center/cover no-repeat; */
   width: 100%;
-  /* height: 300; */
-  /* border-radius: 12px; */
-  /* box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2); */
 }
 
-/* Page Header */
+
 .page-header {
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   color: white;
@@ -342,7 +330,6 @@ li {
   color: rgba(255, 255, 255, 0.9);
 }
 
-/* Section Headers */
 .section-header {
   display: grid;
   justify-content: center;
@@ -360,67 +347,14 @@ li {
 .section-header p {
   font-size: 1.125rem;
   max-width: 600px;
-  /* margin: 0 auto; */
   text-align: justify;
   padding-bottom: 20px;
 }
 
-/* About Preview */
-/* .about-preview {
-  padding: 80px 0;
-  background-color: #f8fafc;
-}
-
-.features-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
-  margin-bottom: 3rem;
-}
-
-.feature-card {
-  background: white;
-  padding: 2rem;
-  border-radius: 12px;
-  text-align: center;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.feature-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
-}
-
-.feature-icon {
-  width: 60px;
-  height: 60px;
-  margin: 0 auto 1.5rem;
-  background-color: #e0e7ff;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.feature-icon img {
-  width: 30px;
-  height: 30px;
-}
-
-.feature-card h3 {
-  margin-bottom: 1rem;
-  color: #1a1a1a;
-}
-
-.about-cta {
-  text-align: center;
-} */
-
 .card-img-top-wrapper {
     position: relative;
     overflow: hidden;
-    padding-top: 66.67%; /* Approximate 3:2 aspect ratio (565/847 ≈ 0.667) - adjust based on average image ratios */
+    padding-top: 66.67%;
   }
 
   .card-img-top {
@@ -429,12 +363,12 @@ li {
     left: 0;
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Ensures images fill the space without distortion */
+    object-fit: cover;
     transition: transform 0.3s ease;
   }
 
   .card:hover .card-img-top {
-    transform: scale(1.05); /* Slight zoom on hover for interactivity */
+    transform: scale(1.05);
   }
 
   .card-body {
@@ -448,14 +382,13 @@ li {
   }
 
   .card-title a:hover {
-    color: #007bff; /* Bootstrap primary color or customize */
+    color: #007bff;
   }
 
   .card-text {
     margin-bottom: 1rem;
   }
 
-  /* Ensure cards have equal height in row */
   .row > .col > .card {
     display: flex;
     flex-direction: column;
@@ -465,14 +398,22 @@ li {
     flex-grow: 1;
   }
 
-  /* Responsive adjustments */
   @media (max-width: 576px) {
     .card-img-top-wrapper {
-      padding-top: 75%; /* Adjust for smaller screens if needed, e.g., for portrait */
+      padding-top: 75%;
     }
   }
 
-/* Services Preview */
+  @media (max-width: 360px) {
+    .logo-text {
+      font-size: 1.2rem;
+    }
+    .logo {
+      width: 96px;
+      height: auto;
+    }
+  }
+
 .services-preview {
   padding: 80px 0;
 }
@@ -533,7 +474,6 @@ li {
   text-align: center;
 }
 
-/* CTA Section */
 .cta-section {
   background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
   color: white;
@@ -559,7 +499,6 @@ li {
   flex-wrap: wrap;
 }
 
-/* Footer */
 .footer {
   background-color: #1a1a1a;
   color: white;
@@ -640,7 +579,6 @@ li {
   margin: 0;
 }
 
-/* Company Introduction */
 .company-intro {
   padding: 80px 0;
 }
@@ -658,7 +596,6 @@ li {
   border-radius: 12px;
 }
 
-/* Mission & Vision */
 .mission-vision {
   padding: 80px 0;
   background-color: #f8fafc;
@@ -694,7 +631,6 @@ li {
   height: 40px;
 }
 
-/* Values */
 .values {
   padding: 80px 0;
 }
@@ -723,7 +659,6 @@ li {
   margin-bottom: 1rem;
 }
 
-/* Stats */
 .stats {
   padding: 80px 0;
   background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
@@ -753,7 +688,6 @@ li {
   color: rgba(255, 255, 255, 0.9);
 }
 
-/* Leadership */
 .leadership {
   padding: 80px 0;
   background-color: #f8fafc;
@@ -798,7 +732,6 @@ li {
   color: #666;
 }
 
-/* Service Detail */
 .service-detail {
   padding: 80px 0;
 }
@@ -854,7 +787,6 @@ li {
   border-radius: 12px;
 }
 
-/* Industries */
 .industries {
   padding: 80px 0;
 }
@@ -894,7 +826,6 @@ li {
   height: 30px;
 }
 
-/* Process */
 .process {
   padding: 80px 0;
   background-color: #f8fafc;
@@ -1080,7 +1011,6 @@ li {
   text-decoration: underline;
 }
 
-/* Map Section */
 .map-section {
   padding: 80px 0;
   background-color: #f8fafc;
@@ -1117,7 +1047,6 @@ li {
   margin-bottom: 2rem;
 }
 
-/* FAQ Section */
 .faq-section {
   padding: 80px 0;
 }
@@ -1358,7 +1287,7 @@ li {
     padding: 10px 24px;
     font-size: 0.9rem;
   }
-}
+
 
 @media (max-width: 480px) {
   .container {
@@ -1407,7 +1336,6 @@ li {
   }
 }
 
-/* Animation and Transitions */
 @keyframes fadeInUp {
   from {
     opacity: 0;
@@ -1423,7 +1351,6 @@ li {
   animation: fadeInUp 0.6s ease-out;
 }
 
-/* Smooth scrolling offset for fixed navbar */
 section {
   scroll-margin-top: 100px;
 }
@@ -1508,7 +1435,6 @@ section {
   }
 }
 
-/* Loading states */
 .loading {
   opacity: 0.6;
   pointer-events: none;
@@ -1533,7 +1459,6 @@ section {
   margin-top: 0.25rem;
 }
 
-/* Ensure navbar is always visible */
 .tailwind-header {
   position: fixed !important;
   top: 0 !important;
@@ -1542,4 +1467,98 @@ section {
   z-index: 50 !important;
   background-color: white !important;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1) !important;
+}
+
+footer,
+footer p,
+footer span,
+footer li,
+footer i,
+footer svg {
+  color: #ffffff !important;
+  fill: #ffffff !important;
+  stroke: #ffffff !important;
+}
+
+footer a {
+  color: #ffffff !important;
+  transition: color 0.3s ease;
+}
+
+footer h1,
+footer h2,
+footer h3,
+footer h4,
+footer h5,
+footer h6 {
+  color: #ffffff !important;
+}
+
+footer a:hover,
+footer a:focus,
+footer a:active {
+  color: #ED1E28 !important;
+  text-decoration: none;
+}
+
+/* Footer icon overrides: email and location should be red */
+footer svg.lucide-mail,
+footer svg.lucide-map-pin,
+footer i[data-lucide="mail"],
+footer i[data-lucide="map-pin"] {
+  color: #ED1E28 !important;
+  stroke: #ED1E28 !important;
+  fill: #ED1E28 !important;
+}
+
+.footer-section ul li a,
+.contact-info p,
+.footer-bottom p {
+  color: #ffffff !important;
+}
+
+/* Vertical Industry Carousel */
+#industry-carousel.ic-container {
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+}
+#industry-carousel .ic-viewport {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: auto; /* JS will set exact height to current slide */
+}
+#industry-carousel .ic-track {
+  position: relative;
+  will-change: transform;
+  transform: translateY(0);
+  transition: transform 600ms ease;
+}
+#industry-carousel .ic-slide {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 16px 8px;
+  box-sizing: border-box;
+}
+#industry-carousel .ic-slide img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  max-height: 60vh; /* mobile-first; avoids overflow */
+  object-fit: contain;
+  margin: 0 auto 8px;
+}
+#industry-carousel .ic-slide p {
+  font-size: 0.95rem;
+  color: #111827; /* gray-900 */
+}
+@media (min-width: 768px) {
+  #industry-carousel .ic-slide img {
+    max-height: 70vh;
+  }
 }

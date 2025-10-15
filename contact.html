@@ -12,17 +12,26 @@
     />
   </head>
 
-  <body class="font-sans text-gray-800">
+  <body class="font-sans text-gray-800 overflow-x-hidden">
     <!-- Navbar -->
     <nav class="navbar">
       <div class="nav-container">
         <div class="nav-logo">
           <img
             src="images/city_Linx_Logo_Photo-removebg-preview.png"
-            alt="Prime Logistics Solutions"
+            alt="CityLinx Logistics"
             class="logo"
           />
         </div>
+        
+        <!-- Hamburger Menu Toggle -->
+        <div class="nav-toggle" id="nav-toggle">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+        
+        <!-- Navigation Menu -->
         <div class="nav-menu" id="nav-menu">
           <li><a href="index.html" class="nav-link">HOME</a></li>
           <li><a href="about.html" class="nav-link">ABOUT US</a></li>
@@ -72,10 +81,8 @@
                   Our Locations
                 </h3>
                 <ul class="text-black text-[18px] space-y-2">
-                  <li>📍 120 Wood Avenue South, Suite 408, Iselin, NJ 08830</li>
-                  <li>
-                    📍 16821 Buccaneer Ln., Suite 200, Houston, Texas 77058
-                  </li>
+                  <li>📍 Sheridan, WY 82801, USA</li>
+                  
                 </ul>
               </div>
 
@@ -97,7 +104,7 @@
                   </svg>
                   Our Phone
                 </h3>
-                <p class="text-black text-[18px]">+1201-259-9223</p>
+                <p class="text-black text-[18px]"></p>
               </div>
 
               <hr class="border-gray-300" />
@@ -118,7 +125,7 @@
                   </svg>
                   Our Fax
                 </h3>
-                <p class="text-black text-[18px]">+1201-537-5242</p>
+                <p class="text-black text-[18px]"></p>
               </div>
             </div>
 
@@ -190,7 +197,7 @@
           </div>
 
           <!-- Two Maps (below both sections) -->
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-10">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-10 z-0">
             <div id="leaflet-map-left" class="rounded-lg h-64 shadow-md"></div>
             <div id="leaflet-map-right" class="rounded-lg h-64 shadow-md"></div>
           </div>
@@ -242,7 +249,7 @@
           <!-- Information Section -->
           <div class="md:w-1/3">
             <h2
-              class="text-2xl font-extrabold uppercase mb-6 text-white tracking-wide"
+              class="text-2xl font-extrabold uppercase mb-6 text-black tracking-wide"
             >
               Information
             </h2>
@@ -291,7 +298,7 @@
 
           <script src="https://unpkg.com/lucide@latest"></script>
 
-          <div class="md:w-1/3 text-white">
+           <div class="md:w-1/3 text-white">
             <h2 class="text-2xl font-extrabold uppercase mb-6 tracking-wide">
               Keep In Touch
             </h2>
@@ -300,58 +307,32 @@
               class="space-y-3 text-[15px]"
               style="font-family: 'League Spartan', sans-serif"
             >
-              <!-- PHONE -->
-              <li class="flex items-center space-x-2">
-                <i data-lucide="phone" class="w-5 h-5 text-red-500"></i>
-                <span>Phone: </span>
-                <a
-                  href="tel:+13072345678"
-                  class="transition-colors duration-300 ease-in-out hover:text-red-500 cursor-pointer"
-                >
-                  (307) 234-5678 ext: 1001
-                </a>
-              </li>
-
-              <!-- EMAIL 1 -->
+              <!-- EMAIL -->
               <li class="flex items-center space-x-2">
                 <i data-lucide="mail" class="w-5 h-5 text-red-500"></i>
-                <span>E-mail: </span>
+                <span>E-mail : </span>
                 <a
-                  href="mailto:clark@citylinx.com"
+                  href="mailto:info@citylinxlogistics.com"
                   class="transition-colors duration-300 ease-in-out hover:text-red-500 cursor-pointer"
                 >
-                  clark@citylinx.com
-                </a>
-              </li>
-
-              <!-- EMAIL 2 -->
-              <li class="flex items-center space-x-2">
-                <i data-lucide="mail" class="w-5 h-5 text-red-500"></i>
-                <a
-                  href="mailto:admin@citylinx.com"
-                  class="transition-colors duration-300 ease-in-out hover:text-red-500 cursor-pointer"
-                >
-                  admin@citylinx.com
+                  info@citylinxlogistics.com
                 </a>
               </li>
 
               <!-- ADDRESS -->
               <li class="flex items-center space-x-2">
-                <i data-lucide="map-pin" class="w-5 z-0 h-5 text-red-500"></i>
+                <i data-lucide="map-pin" class="w-5 h-5 text-red-500"></i>
                 <a
-                  href="https://maps.google.com/?q=Casper, WY 82601, USA"
+                  href="https://maps.google.com/?q=30 N Gould St Ste R, Sheridan, WY 82801, USA"
                   target="_blank"
                   class="transition-colors duration-300 ease-in-out hover:text-red-500 cursor-pointer"
                 >
-                  Casper, WY 82601, USA
+                  30 N Gould St Ste R<br />Sheridan, WY 82801<br />USA
                 </a>
               </li>
             </ul>
           </div>
 
-          <script>
-            lucide.createIcons();
-          </script>
 
           <!-- Contact Us Section -->
           <div class="md:w-1/3">
@@ -500,369 +481,7 @@
       </div>
     </div>
 
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        // Footer contact form
-        const form = document.getElementById("contactForm");
-        const submitBtn = document.getElementById("submitBtn");
-        const btnText = document.getElementById("btnText");
-        const btnLoading = document.getElementById("btnLoading");
-
-        // Main contact form
-        const mainForm = document.getElementById("mainContactForm");
-        const mainSubmitBtn = document.getElementById("mainSubmitBtn");
-        const mainBtnText = document.getElementById("mainBtnText");
-        const mainBtnLoading = document.getElementById("mainBtnLoading");
-
-        // Clear error messages when user starts typing
-        const inputs = form.querySelectorAll("input, textarea");
-        inputs.forEach((input) => {
-          input.addEventListener("input", function () {
-            const errorDiv = document.getElementById(input.id + "Error");
-            if (errorDiv) {
-              errorDiv.classList.add("hidden");
-              errorDiv.textContent = "";
-            }
-          });
-        });
-
-        // Main contact form handling
-        if (mainForm && mainSubmitBtn) {
-          // Clear error messages when user starts typing
-          const mainInputs = mainForm.querySelectorAll("input, textarea");
-          mainInputs.forEach((input) => {
-            input.addEventListener("input", function () {
-              const errorDiv = document.getElementById(
-                "main" + input.id.replace("main", "") + "Error"
-              );
-              if (errorDiv) {
-                errorDiv.classList.add("hidden");
-                errorDiv.textContent = "";
-              }
-            });
-          });
-
-          mainForm.addEventListener("submit", async (e) => {
-            e.preventDefault();
-
-            // Clear previous errors
-            clearMainErrors();
-
-            // Get form data
-            const name = document.getElementById("mainName").value.trim();
-            const email = document.getElementById("mainEmail").value.trim();
-            const phone = document.getElementById("mainPhone").value.trim();
-            const message = document.getElementById("mainMessage").value.trim();
-
-            // Validate form
-            if (!validateMainForm(name, email, message)) {
-              return;
-            }
-
-            // Show loading state
-            showMainLoading(true);
-
-            try {
-              const response = await fetch("http://localhost:5000/sendMail", {
-                method: "POST",
-                headers: {
-                  "Content-Type": "application/json",
-                },
-                body: JSON.stringify({
-                  name: name,
-                  email: email,
-                  phone: phone,
-                  message: message,
-                }),
-              });
-
-              const result = await response.json();
-
-              if (result.success) {
-                // Show success modal
-                document
-                  .getElementById("successModal")
-                  .classList.remove("hidden");
-                // Reset form
-                mainForm.reset();
-              } else {
-                alert("Error: " + result.message);
-              }
-            } catch (error) {
-              console.error("Error:", error);
-              alert(
-                "Sorry, there was an error sending your message. Please try again later."
-              );
-            } finally {
-              // Hide loading state
-              showMainLoading(false);
-            }
-          });
-        }
-
-        // Main contact form helper functions
-        function validateMainForm(name, email, message) {
-          let isValid = true;
-
-          // Validate name
-          if (!name) {
-            showMainError("mainName", "Name is required");
-            isValid = false;
-          } else if (name.length < 2) {
-            showMainError("mainName", "Name must be at least 2 characters");
-            isValid = false;
-          }
-
-          // Validate email
-          if (!email) {
-            showMainError("mainEmail", "Email is required");
-            isValid = false;
-          } else if (!isValidEmail(email)) {
-            showMainError("mainEmail", "Please enter a valid email address");
-            isValid = false;
-          }
-
-          // Validate message
-          if (!message) {
-            showMainError("mainMessage", "Message is required");
-            isValid = false;
-          } else if (message.length < 10) {
-            showMainError(
-              "mainMessage",
-              "Message must be at least 10 characters"
-            );
-            isValid = false;
-          }
-
-          return isValid;
-        }
-
-        function showMainError(fieldId, message) {
-          const errorDiv = document.getElementById(fieldId + "Error");
-          if (errorDiv) {
-            errorDiv.textContent = message;
-            errorDiv.classList.remove("hidden");
-          }
-        }
-
-        function clearMainErrors() {
-          const errorDivs = document.querySelectorAll('[id$="Error"]');
-          errorDivs.forEach((div) => {
-            if (div.id.includes("main")) {
-              div.classList.add("hidden");
-              div.textContent = "";
-            }
-          });
-        }
-
-        function showMainLoading(show) {
-          if (show) {
-            mainBtnText.classList.add("hidden");
-            mainBtnLoading.classList.remove("hidden");
-            mainSubmitBtn.disabled = true;
-          } else {
-            mainBtnText.classList.remove("hidden");
-            mainBtnLoading.classList.add("hidden");
-            mainSubmitBtn.disabled = false;
-          }
-        }
-
-        form.addEventListener("submit", async (e) => {
-          e.preventDefault();
-
-          // Clear previous errors
-          clearErrors();
-
-          // Get form data
-          const name = document.getElementById("name").value.trim();
-          const email = document.getElementById("email").value.trim();
-          const phone = document.getElementById("phone").value.trim();
-          const message = document.getElementById("message").value.trim();
-
-          // Validate form
-          if (!validateForm(name, email, message)) {
-            return;
-          }
-
-          // Show loading state
-          showLoading(true);
-
-          try {
-            const response = await fetch("http://localhost:5000/sendMail", {
-              method: "POST",
-              headers: {
-                "Content-Type": "application/json",
-              },
-              body: JSON.stringify({ name, email, phone, message }),
-            });
-
-            const result = await response.json();
-
-            if (response.ok && result.success) {
-              // Success
-              document
-                .getElementById("successModal")
-                .classList.remove("hidden");
-              form.reset();
-            } else {
-              // Error from server
-              showError(
-                "submitBtn",
-                result.message ||
-                  "Something went wrong. Please try again later."
-              );
-            }
-          } catch (error) {
-            console.error("Form submission error:", error);
-            showError(
-              "submitBtn",
-              "Network error. Please check your connection and try again."
-            );
-          } finally {
-            // Hide loading state
-            showLoading(false);
-          }
-        });
-
-        // Add event listener to close button
-        document
-          .getElementById("closeModal")
-          .addEventListener("click", closeModal);
-      });
-
-      function validateForm(name, email, message) {
-        let isValid = true;
-
-        // Validate name
-        if (!name) {
-          showError("name", "Name is required");
-          isValid = false;
-        } else if (name.length < 2) {
-          showError("name", "Name must be at least 2 characters");
-          isValid = false;
-        }
-
-        // Validate email
-        if (!email) {
-          showError("email", "Email is required");
-          isValid = false;
-        } else if (!isValidEmail(email)) {
-          showError("email", "Please enter a valid email address");
-          isValid = false;
-        }
-
-        // Validate message
-        if (!message) {
-          showError("message", "Message is required");
-          isValid = false;
-        } else if (message.length < 10) {
-          showError("message", "Message must be at least 10 characters");
-          isValid = false;
-        }
-
-        return isValid;
-      }
-
-      function isValidEmail(email) {
-        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        return emailRegex.test(email);
-      }
-
-      function showError(fieldId, message) {
-        const errorDiv = document.getElementById(fieldId + "Error");
-        if (errorDiv) {
-          errorDiv.textContent = message;
-          errorDiv.classList.remove("hidden");
-        }
-      }
-
-      function clearErrors() {
-        const errorDivs = document.querySelectorAll('[id$="Error"]');
-        errorDivs.forEach((div) => {
-          div.classList.add("hidden");
-          div.textContent = "";
-        });
-      }
-
-      function showLoading(show) {
-        const btnText = document.getElementById("btnText");
-        const btnLoading = document.getElementById("btnLoading");
-        const submitBtn = document.getElementById("submitBtn");
-
-        if (show) {
-          btnText.classList.add("hidden");
-          btnLoading.classList.remove("hidden");
-          submitBtn.disabled = true;
-        } else {
-          btnText.classList.remove("hidden");
-          btnLoading.classList.add("hidden");
-          submitBtn.disabled = false;
-        }
-      }
-
-      function closeModal() {
-        document.getElementById("successModal").classList.add("hidden");
-      }
-
-      // Initialize Leaflet Map
-      var map = L.map("leaflet-map").setView([42.8666, -106.3131], 13);
-      L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
-        attribution:
-          '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
-      }).addTo(map);
-      L.marker([42.8666, -106.3131])
-        .addTo(map)
-        .bindPopup("Casper City Park<br>Casper North<br>Casper, WY 82601")
-        .openPopup();
-
-      // Back to top button functionality
-      const backToTopBtn = document.querySelector(".back-to-top-btn");
-      if (backToTopBtn) {
-        window.addEventListener("scroll", function () {
-          if (window.scrollY > 300) {
-            backToTopBtn.style.display = "block";
-            backToTopBtn.style.opacity = "1";
-          } else {
-            backToTopBtn.style.opacity = "0";
-            setTimeout(() => {
-              if (window.scrollY <= 300) {
-                backToTopBtn.style.display = "none";
-              }
-            }, 300);
-          }
-        });
-      }
-    </script>
-    <script>
-      // Mobile menu functionality
-      document.addEventListener("DOMContentLoaded", function () {
-        const mobileMenuButton = document.getElementById("mobile-menu-button");
-        const mobileMenu = document.getElementById("mobile-menu");
-
-        if (mobileMenuButton && mobileMenu) {
-          mobileMenuButton.addEventListener("click", function () {
-            mobileMenu.classList.toggle("-translate-x-full");
-          });
-
-          // Close mobile menu when clicking on a link
-          const mobileMenuLinks = mobileMenu.querySelectorAll("a");
-          mobileMenuLinks.forEach((link) => {
-            link.addEventListener("click", function () {
-              mobileMenu.classList.add("-translate-x-full");
-            });
-          });
-
-          // Close mobile menu when clicking outside
-          document.addEventListener("click", function (event) {
-            if (
-              !mobileMenuButton.contains(event.target) &&
-              !mobileMenu.contains(event.target)
-            ) {
-              mobileMenu.classList.add("-translate-x-full");
-            }
-          });
-        }
-      });
-    </script>
+  
+    <script src="js/main.js"></script>
   </body>
 </html>
