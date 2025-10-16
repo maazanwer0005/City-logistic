@@ -1,118 +1,33 @@
-const track = document.getElementById("carousel-track");
-if (track) {
-  const slides = track.children.length;
-  let carouselIndex = 0;
+// navigation...
+const btn = document.getElementById("menu-btn");
+const mobileMenu = document.getElementById("mobile-menu");
+const hamburgerIcon = document.getElementById("hamburger-icon");
+const closeIcon = document.getElementById("close-icon");
 
-  function showSlide(i) {
-    track.style.transform = `translateX(-${i * 15}%)`;
-  }
+btn.addEventListener("click", () => {
+  mobileMenu.classList.toggle("hidden");
+  hamburgerIcon.classList.toggle("hidden");
+  closeIcon.classList.toggle("hidden");
+});
 
-  const nextCarousel = document.getElementById("next");
-  const prevCarousel = document.getElementById("prev");
-
-  if (nextCarousel) {
-    nextCarousel.onclick = () => {
-      carouselIndex = (carouselIndex + 1);
-      showSlide(carouselIndex);
-    };
-  }
-
-  if (prevCarousel) {
-    prevCarousel.onclick = () => {
-      carouselIndex = (carouselIndex - 1 + slides) % slides;
-      showSlide(carouselIndex);
-    };
-  }
-
-  setInterval(() => {
-    carouselIndex = (carouselIndex + 1) % slides;
-    showSlide(carouselIndex);
-  }, 7000);
-}
-
-const slider = document.getElementById("videoSlider");
-if (slider) {
-  const videos = slider.querySelectorAll("video");
-  const total = videos.length;
-  const btns = [window.btn1, window.btn2, window.btn3].filter(Boolean);
-  const mainHeading = document.getElementById("mainHeading");
-  const subHeading = document.getElementById("subHeading");
-  const nextBtn = document.getElementById("nextBtn");
-  const prevBtn = document.getElementById("prevBtn");
-
-  const textData = [
-    {
-      h2: "Fast & Secure Logistics",
-      h3: "For All Your Needs",
-    },
-    {
-      h2: "Delivering Excellence with",
-      h3: "Passion and Innovation",
-    },
-    {
-      h2: "Multimodal Warehousing Solution",
-      h3: "Seamless. Faster. Safer.",
-    },
-  ];
-
-  let index = 0;
-  let timer;
-
-  function updateSlider() {
-    slider.style.transform = `translateX(-${index * 100}%)`;
-    videos.forEach((v) => {
-      v.pause();
-      v.currentTime = 0;
-    });
-    if (videos[index]) videos[index].play();
-    if (mainHeading) mainHeading.textContent = textData[index].h2;
-    if (subHeading) subHeading.textContent = textData[index].h3;
-    btns.forEach((b, i) => {
-      b.classList.remove("border-b-4", "border-yellow-400");
-      b.classList.add("border-b-2", "border-transparent");
-      if (i === index) {
-        b.classList.remove("border-b-2", "border-transparent");
-        b.classList.add("border-b-4", "border-yellow-400");
-      }
-    });
-  }
-
-  function startAutoPlay() {
-    clearInterval(timer);
-    timer = setInterval(() => {
-      index = (index + 1) % total;
-      updateSlider();
-    }, 15000);
-  }
-
-  btns.forEach((b, i) => {
-    b.addEventListener("click", () => {
-      index = i;
-      updateSlider();
-      startAutoPlay();
-    });
+// Close menu when a link is clicked
+document.querySelectorAll("#mobile-menu a").forEach((link) => {
+  link.addEventListener("click", () => {
+    mobileMenu.classList.add("hidden");
+    closeIcon.classList.add("hidden");
+    hamburgerIcon.classList.remove("hidden");
   });
+});
 
-  if (nextBtn) {
-    nextBtn.addEventListener("click", () => {
-      index = (index + 1) % total;
-      updateSlider();
-      startAutoPlay();
-    });
+// Auto-highlight active page
+const currentPage = location.pathname.split("/").pop();
+document.querySelectorAll("nav a").forEach((link) => {
+  if (link.getAttribute("href") === currentPage) {
+    link.classList.add("bg-[#ed1e28]", "text-white");
+  } else {
+    link.classList.remove("bg-[#ed1e28]", "text-white");
   }
-
-  if (prevBtn) {
-    prevBtn.addEventListener("click", () => {
-      index = (index - 1 + total) % total;
-      updateSlider();
-      startAutoPlay();
-    });
-  }
-
-  updateSlider();
-  startAutoPlay();
-}
-
+});
 document.addEventListener("DOMContentLoaded", function () {
   initNavigation();
   initContactForm();
@@ -144,7 +59,10 @@ function initNavigation() {
     });
 
     document.addEventListener("click", function (event) {
-      if (!navToggle.contains(event.target) && !navMenu.contains(event.target)) {
+      if (
+        !navToggle.contains(event.target) &&
+        !navMenu.contains(event.target)
+      ) {
         navMenu.classList.remove("active");
         navToggle.classList.remove("active");
       }
@@ -182,7 +100,10 @@ function initContactForm() {
 
       setTimeout(() => {
         contactForm.reset();
-        showMessage("Thank you for your inquiry! We will get back to you within 24 hours.", "success");
+        showMessage(
+          "Thank you for your inquiry! We will get back to you within 24 hours.",
+          "success"
+        );
         submitBtn.textContent = originalText;
         submitBtn.disabled = false;
       }, 2000);
@@ -200,39 +121,6 @@ function initContactForm() {
       if (errorMsg) errorMsg.remove();
     });
   });
-}
-
-function validateForm(data) {
-  let isValid = true;
-  const requiredFields = ["name", "email", "phone"];
-
-  requiredFields.forEach((field) => {
-    const input = document.getElementById(field);
-    if (input && !data[field].trim()) {
-      isValid = false;
-      showFieldError(input, "This field is required");
-    }
-  });
-
-  const email = document.getElementById("email");
-  if (email && data.email) {
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailRegex.test(data.email)) {
-      isValid = false;
-      showFieldError(email, "Please enter a valid email address");
-    }
-  }
-
-  const phone = document.getElementById("phone");
-  if (phone && data.phone) {
-    const phoneRegex = /^[\+]?[1-9][\d]{0,15}$/;
-    if (!phoneRegex.test(data.phone.replace(/[\s\-\(\)]/g, ""))) {
-      isValid = false;
-      showFieldError(phone, "Please enter a valid phone number");
-    }
-  }
-
-  return isValid;
 }
 
 function validateField(field) {

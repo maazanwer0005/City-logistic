@@ -10,113 +10,208 @@
 
   <body class="font-sans text-gray-800 overflow-x-hidden">
     <!-- Navbar -->
-    <nav class="navbar">
-      <div class="nav-container">
-        <div class="nav-logo">
-          <img
-            src="images/city_Linx_Logo_Photo-removebg-preview.png"
-            alt="CityLinx Logistics"
-            class="logo"
-          />
-        </div>
-        
-        <!-- Hamburger Menu Toggle -->
-        <div class="nav-toggle" id="nav-toggle">
-          <span class="bar"></span>
-          <span class="bar"></span>
-          <span class="bar"></span>
-        </div>
-        
-        <!-- Navigation Menu -->
-        <div class="nav-menu" id="nav-menu">
-          <li><a href="index.html" class="nav-link">HOME</a></li>
-          <li><a href="about.html" class="nav-home">ABOUT US</a></li>
-          <li><a href="services.html" class="nav-link">OUR SERVICES</a></li>
-          <li>
-            <a href="become-a-carrier.html" class="nav-link"
-              >BECOME A CARRIER</a
+    <header class="w-full bg-[#DFDFDF] shadow-sm fixed top-0 left-0 z-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between py-4">
+          <!-- Logo -->
+          <a href="#" class="flex items-center space-x-2">
+            <img
+              src="images/city_Linx_Logo_Photo-removebg-preview.png"
+              alt="City Logistics Logo"
+              class="h-20 w-[190px]"
+            />
+          </a>
+
+          <!-- Menu Button (Mobile) -->
+          <button
+            id="menu-btn"
+            class="block md:hidden text-gray-800 focus:outline-none"
+          >
+            <svg
+              class="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
             >
-          </li>
-          <li><a href="contact.html" class="nav-link">CONTACT US</a></li>
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M4 6h16M4 12h16M4 18h16"
+              ></path>
+            </svg>
+          </button>
+
+          <!-- Desktop Navigation -->
+          <nav
+            id="menu"
+            class="hidden md:flex space-x-1 font-semibold text-sm uppercase tracking-wide"
+          >
+            <a
+              href="index.html"
+              class="px-5 py-2 rounded-full hover:bg-[#ed1e28] text-white transition-all duration-300"
+              >Home</a
+            >
+            <a
+              href="about.html"
+              class="px-5 py-2 rounded-full hover:bg-[#ed1e28] hover:text-white transition-all duration-300"
+              >About Us</a
+            >
+            <a
+              href="services.html"
+              class="px-5 py-2 rounded-full hover:bg-[#ed1e28] hover:text-white transition-all duration-300"
+              >Our Services</a
+            >
+            <a
+              href="become-a-carrier.html"
+              class="px-5 py-2 rounded-full hover:bg-[#ed1e28] hover:text-white transition-all duration-300"
+              >Become a Carrier</a
+            >
+            <a
+              href="contact.html"
+              class="px-5 py-2 rounded-full hover:bg-[#ed1e28] hover:text-white transition-all duration-300"
+              >Contact Us</a
+            >
+          </nav>
         </div>
       </div>
-    </nav>
+
+      <!-- Mobile Menu -->
+      <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
+        <nav
+          class="flex flex-col space-y-1 py-3 px-4 text-sm font-semibold uppercase"
+        >
+          <a
+            href="index.html"
+            class="px-3 py-2 rounded-full hover:bg-[#ed1e28] text-white transition-all duration-300"
+            >Home</a
+          >
+          <a
+            href="about.html"
+            class="px-3 py-2 rounded-full hover:bg-[#ed1e28] hover:text-white transition-all duration-300"
+            >About Us</a
+          >
+          <a
+            href="services.html"
+            class="px-3 py-2 rounded-full hover:bg-[#ed1e28] hover:text-white transition-all duration-300"
+            >Our Services</a
+          >
+          <a
+            href="become-a-carrier.html"
+            class="px-3 py-2 rounded-full hover:bg-[#ed1e28] hover:text-white transition-all duration-300"
+            >Become a Carrier</a
+          >
+          <a
+            href="contact.html"
+            class="px-3 py-2 rounded-full hover:bg-[#ed1e28] hover:text-white transition-all duration-300"
+            >Contact Us</a
+          >
+        </nav>
+      </div>
+    </header>
     <!-- Hero Section -->
-       <div
-        class="relative w-full h-[300px] md:h-[400px] lg:h-[500px] bg-cover bg-center"
-        style="
-          background-image: url('https://www.sandsbrokerageinc.com/wp-content/uploads/2023/03/home_ban.webp');
-        "
-      >
-        <div class="absolute inset-0 bg-black opacity-40"></div>
-        <div class="relative flex items-center justify-center h-full px-4">
-          <h1 class="text-white text-3xl md:text-4xl lg:text-5xl font-bold z-10">About Us</h1>
-        </div>
+    <div
+      class="relative w-full h-[300px] md:h-[400px] lg:h-[500px] bg-cover bg-center"
+      style="
+        background-image: url('https://www.sandsbrokerageinc.com/wp-content/uploads/2023/03/home_ban.webp');
+      "
+    >
+      <div class="absolute inset-0 bg-black opacity-40"></div>
+      <div class="relative flex items-center justify-center h-full px-4">
+        <h1 class="text-white text-3xl md:text-4xl lg:text-5xl font-bold z-10">
+          About Us
+        </h1>
       </div>
+    </div>
     <section class="">
       <!-- Top Section (About Us) -->
-      <section class="flex flex-col md:flex-row items-center justify-between px-4 md:px-8 lg:px-16 py-12 md:py-16 gap-8 md:gap-10 max-w-7xl mx-auto">
-    <!-- Left Image -->
-    <div class="relative w-full md:w-1/2 flex justify-center">
-      <img 
-        src="https://www.sandsbrokerageinc.com/wp-content/uploads/2023/04/abt1.webp" 
-        alt="Delivery Driver"
-        class="rounded-lg w-full max-w-sm shadow-lg"
-      />
-    </div>
+      <section
+        class="flex flex-col md:flex-row items-center justify-between px-4 md:px-8 lg:px-16 py-12 md:py-16 gap-8 md:gap-10 max-w-7xl mx-auto"
+      >
+        <!-- Left Image -->
+        <div class="relative w-full md:w-1/2 flex justify-center">
+          <img
+            src="https://www.sandsbrokerageinc.com/wp-content/uploads/2023/04/abt1.webp"
+            alt="Delivery Driver"
+            class="rounded-lg w-full max-w-sm shadow-lg"
+          />
+        </div>
 
-    <!-- Right Content -->
-    <div class="w-full md:w-1/2 space-y-4">
-      <p class="text-sm uppercase tracking-wider text-gray-500 font-semibold">About Us</p>
-      <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold leading-snug">
-        We offer Logistics that
-        <span class="text-yellow-400">just make good</span>
-        business sense
-      </h2>
+        <!-- Right Content -->
+        <div class="w-full md:w-1/2 space-y-4">
+          <p
+            class="text-sm uppercase tracking-wider text-gray-500 font-semibold"
+          >
+            About Us
+          </p>
+          <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold leading-snug">
+            We offer Logistics that
+            <span class="text-yellow-400">just make good</span>
+            business sense
+          </h2>
 
-      <p class="font-bold text-black">
-        S &amp; S Brokerage Inc. is a New Jersey-based 3PL transportation company. 
-        With our team of dedicated preferred carriers, we have built experience of 
-        handling time-critical shipments with guaranteed pickup and delivery.
-      </p>
+          <p class="font-bold text-black">
+            CityLinx is a reliable logistics and transportation company
+            committed to connecting businesses with seamless, on-time delivery
+            solutions across the USA. With our wide network and expert
+            operations team, we ensure your shipments move safely, efficiently,
+            and without delay.
+          </p>
 
-      <p class="text-gray-600 leading-relaxed">
-        We believe communication is the key component to our success. Each member 
-        of our team has the expertise and knowledge to make sure your freight is 
-        delivered safely and on time.
-      </p>
+          <p class="text-gray-600 leading-relaxed mt-3">
+            At CityLinx, we believe that every mile matters. Our team focuses on
+            transparent communication, real-time tracking, and customer-first
+            service to make sure your freight is handled with precision from
+            pickup to delivery.
+          </p>
 
-      <ul class="space-y-3 mt-4">
-        <li class="flex items-start gap-3">
-          <span class="text-blue-600 text-xl">✔</span>
-          <p>Why use multiple logistics and transport suppliers? We can deliver whatever you need, wherever you want and at any time.</p>
-        </li>
-        <li class="flex items-start gap-3">
-          <span class="text-blue-600 text-xl">✔</span>
-          <p>Ideally located at various locations across the USA, we offer you and your business the complete logistical solution.</p>
-        </li>
-      </ul>
-    </div>
-
-  </section>
+          <ul class="space-y-3 mt-4">
+            <li class="flex items-start gap-3">
+              <span class="text-blue-600 text-xl">✔</span>
+              <p>
+                Simplify your logistics with CityLinx — your single partner for
+                all shipping needs. From local hauls to long-distance transport,
+                we manage every step with care and accuracy.
+              </p>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="text-blue-600 text-xl">✔</span>
+              <p>
+                With strategically placed hubs and carrier partnerships
+                nationwide, CityLinx provides complete transportation coverage
+                to keep your business running smoothly and on schedule.
+              </p>
+            </li>
+          </ul>
+        </div>
+      </section>
     </section>
-        <!-- Bottom Section (Why Choose Us?) -->
-    <section class="text-center"> <div class="w-full bg-yellow-400 py-12 md:py-16 lg:py-20 px-4">
-        <h2 class="text-xl md:text-2xl font-semibold text-black">WHY CHOOSE US?</h2>
-        <h3 class="text-2xl md:text-3xl lg:text-4xl text-black mt-6 md:mt-10 mb-8 md:mb-12 lg:mb-16 px-4">
-          4 Reasons Why to Choose Our
-          Logistic Services
+    <!-- Bottom Section (Why Choose Us?) -->
+    <section class="text-center">
+      <div class="w-full bg-yellow-400 py-12 md:py-16 lg:py-20 px-4">
+        <h2 class="text-xl md:text-2xl font-semibold text-black">
+          WHY CHOOSE US?
+        </h2>
+        <h3
+          class="text-2xl md:text-3xl lg:text-4xl text-black mt-6 md:mt-10 mb-8 md:mb-12 lg:mb-16 px-4"
+        >
+          4 Reasons Why to Choose Our Logistic Services
         </h3>
         <div
           class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 max-w-7xl mb-10 mx-auto mt-8 px-4"
         >
-          <div class="bg-yellow-500 p-6 md:p-8 text-center border border-gray-300 rounded-lg">
+          <div
+            class="bg-yellow-500 p-6 md:p-8 text-center border border-gray-300 rounded-lg"
+          >
             <img
               src="images/why1.webp"
               alt="Transparent Pricing"
               class="mx-auto mb-2 w-20 md:w-24 h-auto"
             />
-            <p class="text-3xl md:text-4xl font-extrabold text-black mb-2">01</p>
+            <p class="text-3xl md:text-4xl font-extrabold text-black mb-2">
+              01
+            </p>
             <h4 class="text-lg md:text-xl font-semibold text-black">
               Transparent Pricing
             </h4>
@@ -125,7 +220,9 @@
               start to finish, so you can focus on your core business.
             </p>
           </div>
-          <div class="bg-yellow-500 p-6 md:p-8 text-center border border-gray-300 rounded-lg">
+          <div
+            class="bg-yellow-500 p-6 md:p-8 text-center border border-gray-300 rounded-lg"
+          >
             <img
               src="images/why2.webp"
               alt="On-Time Delivery"
@@ -133,16 +230,16 @@
               style="width: 90px"
             />
             <p class="text-4xl font-extrabold text-black mb-2">02</p>
-            <h4 class="text-xl font-semibold text-black">
-              On-Time Delivery
-            </h4>
+            <h4 class="text-xl font-semibold text-black">On-Time Delivery</h4>
             <p class="text-black mb-12 mt-2">
               You will also be assured of timely and guaranteed delivery. We
               promise you a delivery solution that you no longer need to worry
               about.
             </p>
           </div>
-          <div class="bg-yellow-500 p-6 md:p-8 text-center border border-gray-300 rounded-lg">
+          <div
+            class="bg-yellow-500 p-6 md:p-8 text-center border border-gray-300 rounded-lg"
+          >
             <img
               src="images/why3.webp"
               alt="Friendly Services"
@@ -150,15 +247,15 @@
               style="width: 90px"
             />
             <p class="text-4xl font-extrabold text-black mb-2">03</p>
-            <h4 class="text-xl font-semibold text-black">
-              Friendly Services
-            </h4>
+            <h4 class="text-xl font-semibold text-black">Friendly Services</h4>
             <p class="text-black mb-12 mt-2">
               Our friendly and dedicated account manager will discuss your needs
               deeply with you. We promise you timely and guaranteed deliveries.
             </p>
           </div>
-          <div class="bg-yellow-500 p-6 md:p-8 text-center border border-gray-300 rounded-lg">
+          <div
+            class="bg-yellow-500 p-6 md:p-8 text-center border border-gray-300 rounded-lg"
+          >
             <img
               src="images/why4.webp"
               alt="Customer Service"
@@ -166,9 +263,7 @@
               style="width: 90px"
             />
             <p class="text-4xl font-extrabold text-gray-800 mb-2">04</p>
-            <h4 class="text-xl font-semibold text-black">
-              Customer Service
-            </h4>
+            <h4 class="text-xl font-semibold text-black">Customer Service</h4>
             <p class="text-black mb-12 mt-2x">
               We recognize that each customer may be different with unique
               requirements, so we provide our customers with a personalized
@@ -176,8 +271,9 @@
             </p>
           </div>
         </div>
-      </div></section>
-  
+      </div>
+    </section>
+
     <footer class="bg-indigo-900 text-white py-8">
       <div class="container mx-auto px-4">
         <!-- Main Footer Content -->
@@ -345,7 +441,23 @@
         />
       </svg>
     </button>
+    <script>
+      const btn = document.getElementById("menu-btn");
+      const menu = document.getElementById("mobile-menu");
+      btn.addEventListener("click", () => {
+        menu.classList.toggle("hidden");
+      });
 
+      // Auto-highlight active page
+      const currentPage = location.pathname.split("/").pop();
+      document.querySelectorAll("nav a").forEach((link) => {
+        if (link.getAttribute("href") === currentPage) {
+          link.classList.add("bg-[#ed1e28]", "text-white");
+        } else {
+          link.classList.remove("bg-[#ed1e28]", "text-white");
+        }
+      });
+    </script>
     <script src="js/main.js"></script>
   </body>
 </html>
