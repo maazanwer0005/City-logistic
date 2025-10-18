@@ -39,10 +39,8 @@
       rel="stylesheet"
     />
   </head>
-
   <body class="font-sans text-gray-800 overflow-x-hidden">
     <!-- Header -->
-    <!-- Fixed Header -->
     <header class="w-full bg-[#DFDFDF] shadow-sm fixed top-0 left-0 z-50">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex items-center justify-between py-4">
@@ -101,9 +99,31 @@
             class="hidden md:hidden bg-gray-100 absolute top-16 left-0 w-full p-4 shadow-md"
           >
             <nav class="flex flex-col gap-4">
-              <a href="index.html" class="hover:text-[#ed1e28]">Home</a>
-              <a href="about.html" class="hover:text-[#ed1e28]">About</a>
-              <a href="contact.html" class="hover:text-[#ed1e28]">Contact</a>
+              <a
+                href="index.html"
+                class="hover:bg-[#ed1e28] hover:text-[#ed1e28]"
+                >Home</a
+              >
+              <a
+                href="about.html"
+                class="hover:bg-[#ed1e28] hover:text-[#ed1e28]"
+                >About</a
+              >
+              <a
+                href="services.html"
+                class="hover:bg-[#ed1e28] hover:text-[#ed1e28]"
+                >Services</a
+              >
+              <a
+                href="become-a-carrier.html"
+                class="hover:bg-[#ed1e28] hover:text-[#ed1e28]"
+                >Become a Carrier</a
+              >
+              <a
+                href="contact.html"
+                class="hover:bg-[#ed1e28] hover:text-[#ed1e28]"
+                >Contact</a
+              >
             </nav>
           </div>
 
@@ -148,7 +168,7 @@
         >
           <a
             href="index.html"
-            class="px-3 py-2 rounded-full bg-[#ed1e28] text-white transition-all duration-300"
+            class="px-3 py-2 rounded-full bg-[#ed1e28] hover:bg-[#ed1e28] text-white transition-all duration-300"
             >Home</a
           >
           <a
@@ -174,12 +194,11 @@
         </nav>
       </div>
     </header>
-
     <!-- Hero Section -->
-    <section>
+    <section class="pt-[108px]">
       <img
-        src="images/damn.jpeg"
-        class="w-full h-[90vh] object-center"
+        src="images/cargo-ships-docked-port-night.jpg"
+        class="w-full md:h-[100vh] object-center brightness-50"
         alt="image"
       />
     </section>
@@ -196,7 +215,7 @@
         <h2
           class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold mb-6"
         >
-          CITY LINX LLC
+          CITY LINX LOGISTIC LLC
         </h2>
         <p
           class="max-w-prose sm:max-w-3xl lg:max-w-5xl px-4 sm:px-8 md:px-12 text-xs sm:text-sm md:text-base font-medium text-center sm:text-left leading-relaxed md:leading-8 text-gray-800"
@@ -225,11 +244,26 @@
           id="industryTrack"
           class="flex gap-8 md:gap-10 transition-transform duration-700 ease-in-out"
         >
+          <!-- Boat Support -->
           <div
             class="min-w-[150px] sm:min-w-[170px] md:min-w-[200px] flex flex-col items-center justify-center p-4 bg-white rounded-2xl shadow-sm hover:shadow-lg transition duration-300 hover:-translate-y-1"
           >
             <img
-              src="https://cdn-icons-png.flaticon.com/512/2942/2942673.png"
+              src="images/boatimage-removebg-preview.png"
+              alt="Boat Support"
+              class="h-[70px] md:h-20 w-auto object-contain animate-fade-in"
+            />
+            <p class="mt-3 text-sm md:text-base font-medium text-gray-700">
+              Boat Support
+            </p>
+          </div>
+
+          <!-- Solar Panels -->
+          <div
+            class="min-w-[150px] sm:min-w-[170px] md:min-w-[200px] flex flex-col items-center justify-center p-4 bg-white rounded-2xl shadow-sm hover:shadow-lg transition duration-300 hover:-translate-y-1"
+          >
+            <img
+              src="images/slar.jpg"
               alt="Solar Panels"
               class="h-16 md:h-20 w-auto object-contain animate-fade-in"
             />
@@ -237,11 +271,55 @@
               Solar Panels
             </p>
           </div>
+
+          <!-- Aerospace -->
           <div
             class="min-w-[150px] sm:min-w-[170px] md:min-w-[200px] flex flex-col items-center justify-center p-4 bg-white rounded-2xl shadow-sm hover:shadow-lg transition duration-300 hover:-translate-y-1"
           >
             <img
-              src="https://cdn-icons-png.flaticon.com/512/3132/3132693.png"
+              src="images/aerospace-removebg-preview.png"
+              alt="Aerospace"
+              class="h-16 md:h-20 w-auto object-contain animate-fade-in"
+            />
+            <p class="mt-3 text-sm md:text-base font-medium text-gray-700">
+              Aerospace
+            </p>
+          </div>
+
+          <!-- Trailer -->
+          <div
+            class="min-w-[150px] sm:min-w-[170px] md:min-w-[200px] flex flex-col items-center justify-center p-4 bg-white rounded-2xl shadow-sm hover:shadow-lg transition duration-300 hover:-translate-y-1"
+          >
+            <img
+              src="images/triler-removebg-preview.png"
+              alt="Trailer"
+              class="h-16 md:h-20 w-auto object-contain animate-fade-in"
+            />
+            <p class="mt-3 text-sm md:text-base font-medium text-gray-700">
+              Trailer
+            </p>
+          </div>
+
+          <!-- Solar Panels (2nd) -->
+          <div
+            class="min-w-[150px] sm:min-w-[170px] md:min-w-[200px] flex flex-col items-center justify-center p-4 bg-white rounded-2xl shadow-sm hover:shadow-lg transition duration-300 hover:-translate-y-1"
+          >
+            <img
+              src="images/solar.jpg"
+              alt="Solar Panels"
+              class="h-16 md:h-20 w-auto object-contain animate-fade-in"
+            />
+            <p class="mt-3 text-sm md:text-base font-medium text-gray-700">
+              Solar Panels
+            </p>
+          </div>
+
+          <!-- Heavy Equipment -->
+          <div
+            class="min-w-[150px] sm:min-w-[170px] md:min-w-[200px] flex flex-col items-center justify-center p-4 bg-white rounded-2xl shadow-sm hover:shadow-lg transition duration-300 hover:-translate-y-1"
+          >
+            <img
+              src="images/heavy.jpg"
               alt="Heavy Equipment"
               class="h-16 md:h-20 w-auto object-contain animate-fade-in"
             />
@@ -249,52 +327,18 @@
               Heavy Equipment
             </p>
           </div>
+
+          <!-- Freight Shipping -->
           <div
             class="min-w-[150px] sm:min-w-[170px] md:min-w-[200px] flex flex-col items-center justify-center p-4 bg-white rounded-2xl shadow-sm hover:shadow-lg transition duration-300 hover:-translate-y-1"
           >
             <img
-              src="https://cdn-icons-png.flaticon.com/512/3480/3480545.png"
+              src="images/freight-removebg-preview.png"
               alt="Freight Shipping"
               class="h-16 md:h-20 w-auto object-contain animate-fade-in"
             />
             <p class="mt-3 text-sm md:text-base font-medium text-gray-700">
               Freight Shipping
-            </p>
-          </div>
-          <div
-            class="min-w-[150px] sm:min-w-[170px] md:min-w-[200px] flex flex-col items-center justify-center p-4 bg-white rounded-2xl shadow-sm hover:shadow-lg transition duration-300 hover:-translate-y-1"
-          >
-            <img
-              src="https://cdn-icons-png.flaticon.com/512/2972/2972185.png"
-              alt="Hardware Supplies"
-              class="h-16 md:h-20 w-auto object-contain animate-fade-in"
-            />
-            <p class="mt-3 text-sm md:text-base font-medium text-gray-700">
-              Hardware Supplies
-            </p>
-          </div>
-          <div
-            class="min-w-[150px] sm:min-w-[170px] md:min-w-[200px] flex flex-col items-center justify-center p-4 bg-white rounded-2xl shadow-sm hover:shadow-lg transition duration-300 hover:-translate-y-1"
-          >
-            <img
-              src="https://cdn-icons-png.flaticon.com/512/3132/3132638.png"
-              alt="Boat Support"
-              class="h-16 md:h-20 w-auto object-contain animate-fade-in"
-            />
-            <p class="mt-3 text-sm md:text-base font-medium text-gray-700">
-              Boat Support
-            </p>
-          </div>
-          <div
-            class="min-w-[150px] sm:min-w-[170px] md:min-w-[200px] flex flex-col items-center justify-center p-4 bg-white rounded-2xl shadow-sm hover:shadow-lg transition duration-300 hover:-translate-y-1"
-          >
-            <img
-              src="https://cdn-icons-png.flaticon.com/512/3132/3132690.png"
-              alt="Aerospace"
-              class="h-16 md:h-20 w-auto object-contain animate-fade-in"
-            />
-            <p class="mt-3 text-sm md:text-base font-medium text-gray-700">
-              Aerospace
             </p>
           </div>
         </div>
@@ -447,6 +491,12 @@
                 drayage shipping which is the process of moving container
                 freight within the State or interstate between…
               </p>
+              <a
+                href="drayage.html"
+                class="bg-red-500 text-white px-6 md:px-8 py-2 md:py-3 mt-8 md:mt-16 rounded-full text-sm md:text-base font-bold transition-all duration-300 ease-in-out hover:bg-red-600 hover:scale-105 self-start md:self-auto inline-block text-center"
+              >
+                READ MORE
+              </a>
             </div>
           </div>
           <div class="w-full max-w-md mx-auto">
@@ -467,6 +517,12 @@
                 equipment available. OTR truck drivers haul all types of items
                 including heavy freight, machinery, construction…
               </p>
+              <a
+                href="drayage.html"
+                class="bg-red-500 text-white px-6 md:px-8 py-2 md:py-3 mt-8 md:mt-16 rounded-full text-sm md:text-base font-bold transition-all duration-300 ease-in-out hover:bg-red-600 hover:scale-105 self-start md:self-auto inline-block text-center"
+              >
+                READ MORE
+              </a>
             </div>
           </div>
           <div class="w-full max-w-md mx-auto">
@@ -485,9 +541,15 @@
               <p class="text-black font-semibold leading-7">
                 Warehousing is “Receiving” “Identifying” “Holding” and
                 “Packaging” hence preparing them for delivery. Warehousing and
-                distribution are an integrated part of City Logistics. We
+                distribution are an integrated part of CityLinx Logistics. We
                 provide warehousing…
               </p>
+              <a
+                href="drayage.html"
+                class="bg-red-500 text-white px-6 md:px-8 py-2 md:py-3 mt-8 md:mt-16 rounded-full text-sm md:text-base font-bold transition-all duration-300 ease-in-out hover:bg-red-600 hover:scale-105 self-start md:self-auto inline-block text-center"
+              >
+                READ MORE
+              </a>
             </div>
           </div>
         </div>
