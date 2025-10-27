@@ -1,0 +1,864 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CityLinx - Professional Freight & Shipping Services</title>
+    <meta
+      name="description"
+      content="Leading logistics brokerage company providing freight solutions, shipping services, and transportation management across North America."
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      l .carousel-track {
+        transition: transform 0.6s ease-in-out;
+      }
+    </style>
+    <style>
+      /* small inline tweak only for smoother text-rendering (allowed) */
+      html,
+      body {
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+    </style>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="font-sans text-gray-800 overflow-x-hidden">
+    <!-- Header -->
+    <header class="w-full h-[142px] bg-white shadow-sm fixed top-0 left-0 z-50">
+      <div class="max-w-7xl mx-auto lg:px-8">
+        <div class="flex items-center justify-between py-2">
+          <!-- Logo -->
+          <a href="#" class="flex items-center space-x-2">
+            <img
+              src="images/city_Linx_Logo_Photo-removebg-preview.png"
+              alt="City Logistics Logo"
+              class="h-[150px] w-[240px] ml-[30px] ml-[30px]"
+            />
+          </a>
+
+          <!-- Menu Button (Mobile) -->
+          <button
+            id="menu-btn"
+            class="block md:hidden text-gray-800 focus:outline-none relative w-8 h-8"
+          >
+            <!-- Hamburger Icon -->
+            <svg
+              id="hamburger-icon"
+              class="w-8 h-8 absolute inset-0 transition-all duration-300"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M4 6h16M4 12h16M4 18h16"
+              ></path>
+            </svg>
+
+            <!-- Close (X) Icon -->
+            <svg
+              id="close-icon"
+              class="w-8 h-8 absolute inset-0 hidden transition-all duration-300"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M6 18L18 6M6 6l12 12"
+              ></path>
+            </svg>
+          </button>
+
+          <!-- Mobile Menu -->
+          <div
+            id="mobile-menu"
+            class="hidden md:hidden bg-gray-100 absolute top-16 left-0 w-full p-4 shadow-md"
+          >
+            <nav class="flex flex-col gap-4">
+              <a
+                href="index.html"
+                class="hover:bg-[#ed1e28] hover:text-[#ed1e28]"
+                >Home</a
+              >
+              <a
+                href="about.html"
+                class="hover:bg-[#ed1e28] hover:text-[#ed1e28]"
+                >About</a
+              >
+              <a
+                href="services.html"
+                class="hover:bg-[#ed1e28] hover:text-[#ed1e28]"
+                >Services</a
+              >
+              <a
+                href="become-a-carrier.html"
+                class="hover:bg-[#ed1e28] hover:text-[#ed1e28]"
+                >Become a Carrier</a
+              >
+              <a
+                href="contact.html"
+                class="hover:bg-[#ed1e28] hover:text-[#ed1e28]"
+                >Contact</a
+              >
+            </nav>
+          </div>
+
+          <!-- Desktop Navigation -->
+          <nav
+            id="menu"
+            class="hidden md:flex space-x-1 font-semibold text-sm uppercase tracking-wide"
+          >
+            <a
+              href="index.html"
+              class="px-5 py-2 rounded-full text-white transition-all duration-300"
+              >Home</a
+            >
+            <a
+              href="about.html"
+              class="px-5 py-2 rounded-full hover:bg-[#ed1e28] hover:text-white transition-all duration-300"
+              >About Us</a
+            >
+            <a
+              href="services.html"
+              class="px-5 py-2 rounded-full hover:bg-[#ed1e28] hover:text-white transition-all duration-300"
+              >Our Services</a
+            >
+            <a
+              href="become-a-carrier.html"
+              class="px-5 py-2 rounded-full hover:bg-[#ed1e28] hover:text-white transition-all duration-300"
+              >Become a Carrier</a
+            >
+            <a
+              href="contact.html"
+              class="px-5 py-2 rounded-full hover:bg-[#ed1e28] hover:text-white transition-all duration-300"
+              >Contact Us</a
+            >
+          </nav>
+        </div>
+      </div>
+
+      <!-- Mobile Menu -->
+      <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
+        <nav
+          class="flex flex-col space-y-1 py-3 px-4 text-sm font-semibold uppercase"
+        >
+          <a
+            href="index.html"
+            class="px-3 py-2 rounded-full bg-[#ed1e28] hover:bg-[#ed1e28] text-white transition-all duration-300"
+            >Home</a
+          >
+          <a
+            href="about.html"
+            class="px-3 py-2 rounded-full hover:bg-[#ed1e28] hover:text-white transition-all duration-300"
+            >About Us</a
+          >
+          <a
+            href="services.html"
+            class="px-3 py-2 rounded-full hover:bg-[#ed1e28] hover:text-white transition-all duration-300"
+            >Our Services</a
+          >
+          <a
+            href="become-a-carrier.html"
+            class="px-3 py-2 rounded-full hover:bg-[#ed1e28] hover:text-white transition-all duration-300"
+            >Become a Carrier</a
+          >
+          <a
+            href="contact.html"
+            class="px-3 py-2 rounded-full hover:bg-[#ed1e28] hover:text-white transition-all duration-300"
+            >Contact Us</a
+          >
+        </nav>
+      </div>
+    </header>
+    <!-- Hero Section -->
+    <section class="pt-[108px]">
+      <img
+        src="images/home-ships.png"
+        class="w-full h-[650px] object-center"
+        alt="image"
+      />
+    </section>
+    <!-- Welcome / Intro Section (added) -->
+    <section class="welcome-section bg-white text-black">
+      <div
+        class="flex flex-col items-center justify-center text-center px-5 py-14 md:py-20 lg:py-28"
+      >
+        <p
+          class="text-sm sm:text-base md:text-lg text-[#000] uppercase tracking-wide font-semibold"
+        >
+          Welcome to
+        </p>
+        <h2
+          class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold mb-6"
+        >
+          CityLinx Logistic llc
+        </h2>
+        <p
+          class="max-w-prose sm:max-w-3xl lg:max-w-5xl px-4 sm:px-8 md:px-12 text-xs sm:text-sm md:text-base font-medium text-center sm:text-left leading-relaxed md:leading-8 text-gray-800"
+        >
+          We as freight brokers work as a liaison between shippers and carriers.
+          Instead of taking possession of the freight, we facilitate
+          communication between the shipper and the carrier. We’re the ones
+          making sure the handoff goes smoothly between carriers and shippers,
+          and that freight arrives safely, and on time.
+        </p>
+      </div>
+    </section>
+    <!-- carousal -->
+    <section
+      class="px-4 md:px-8 lg:px-16 xl:px-24 py-12 md:py-16 bg-white relative overflow-hidden select-none"
+    >
+      <h2
+        class="text-2xl md:text-3xl lg:text-4xl font-semibold text-gray-900 mb-10 text-center"
+      >
+        We Serve The Following Industry
+      </h2>
+
+      <div class="relative flex items-center overflow-hidden">
+        <!-- Track -->
+        <div
+          id="industryTrack"
+          class="flex gap-8 md:gap-10 transition-transform duration-700 ease-in-out"
+        >
+          <!-- Boat Support -->
+          <div
+            class="min-w-[150px] sm:min-w-[170px] md:min-w-[200px] flex flex-col items-center justify-center p-4 bg-white rounded-2xl shadow-sm hover:shadow-lg transition duration-300 hover:-translate-y-1"
+          >
+            <img
+              src="images/conveyor.png"
+              alt="Boat Support"
+              class="h-[70px] md:h-20 w-auto object-contain animate-fade-in"
+            />
+            <p class="mt-3 text-sm md:text-base font-medium text-gray-700">
+              Manufacturing
+            </p>
+          </div>
+
+          <!-- Solar Panels -->
+          <div
+            class="min-w-[150px] sm:min-w-[170px] md:min-w-[200px] flex flex-col items-center justify-center p-4 bg-white rounded-2xl shadow-sm hover:shadow-lg transition duration-300 hover:-translate-y-1"
+          >
+            <img
+              src="images/store.png"
+              alt="Solar Panels"
+              class="h-16 md:h-20 w-auto object-contain animate-fade-in"
+            />
+            <p class="mt-3 text-sm md:text-base font-medium text-gray-700">
+              Retail & E-commerce
+            </p>
+          </div>
+
+          <!-- Aerospace -->
+          <div
+            class="min-w-[150px] sm:min-w-[170px] md:min-w-[200px] flex flex-col items-center justify-center p-4 bg-white rounded-2xl shadow-sm hover:shadow-lg transition duration-300 hover:-translate-y-1"
+          >
+            <img
+              src="images/factory.png"
+              alt="Aerospace"
+              class="h-16 md:h-20 w-auto object-contain animate-fade-in"
+            />
+            <p class="mt-3 text-sm md:text-base font-medium text-gray-700">
+              Automotive
+            </p>
+          </div>
+
+          <!-- Trailer -->
+          <div
+            class="min-w-[150px] sm:min-w-[170px] md:min-w-[200px] flex flex-col items-center justify-center p-4 bg-white rounded-2xl shadow-sm hover:shadow-lg transition duration-300 hover:-translate-y-1"
+          >
+            <img
+              src="images/pharmaceuticals.png"
+              alt="Trailer"
+              class="h-16 md:h-20 w-auto object-contain animate-fade-in"
+            />
+            <p class="mt-3 text-sm md:text-base font-medium text-gray-700">
+              Pharmaceuticals
+            </p>
+          </div>
+
+          <!-- Solar Panels (2nd) -->
+          <div
+            class="min-w-[150px] sm:min-w-[170px] md:min-w-[200px] flex flex-col items-center justify-center p-4 bg-white rounded-2xl shadow-sm hover:shadow-lg transition duration-300 hover:-translate-y-1"
+          >
+            <img
+              src="images/harvester.png"
+              alt="Solar Panels"
+              class="h-16 md:h-20 w-auto object-contain animate-fade-in"
+            />
+            <p class="mt-3 text-sm md:text-base font-medium text-gray-700">
+              Agriculture and Food
+            </p>
+          </div>
+
+          <!-- Heavy Equipment -->
+          <div
+            class="min-w-[150px] sm:min-w-[170px] md:min-w-[200px] flex flex-col items-center justify-center p-4 bg-white rounded-2xl shadow-sm hover:shadow-lg transition duration-300 hover:-translate-y-1"
+          >
+            <img
+              src="images/demolishing.png"
+              alt="Heavy Equipment"
+              class="h-16 md:h-20 w-auto object-contain animate-fade-in"
+            />
+            <p class="mt-3 text-sm md:text-base font-medium text-gray-700">
+              Heavy Equipment
+            </p>
+          </div>
+
+          <!-- Freight Shipping -->
+          <div
+            class="min-w-[150px] sm:min-w-[170px] md:min-w-[200px] flex flex-col items-center justify-center p-4 bg-white rounded-2xl shadow-sm hover:shadow-lg transition duration-300 hover:-translate-y-1"
+          >
+            <img
+              src="images/oil-price.png"
+              alt="Freight Shipping"
+              class="h-16 md:h-20 w-auto object-contain animate-fade-in"
+            />
+            <p class="mt-3 text-sm md:text-base font-medium text-gray-700">
+              Energy & Oil
+            </p>
+          </div>
+          <div
+            class="min-w-[150px] sm:min-w-[170px] md:min-w-[200px] flex flex-col items-center justify-center p-4 bg-white rounded-2xl shadow-sm hover:shadow-lg transition duration-300 hover:-translate-y-1"
+          >
+            <img
+              src="images/device.png"
+              alt="Freight Shipping"
+              class="h-16 md:h-20 w-auto object-contain animate-fade-in"
+            />
+            Technology and electronics
+            <p class="mt-3 text-sm md:text-base font-medium text-gray-700"></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <style>
+      @keyframes fade-in {
+        from {
+          opacity: 0;
+          transform: scale(0.95);
+        }
+
+        to {
+          opacity: 1;
+          transform: scale(1);
+        }
+      }
+
+      .animate-fade-in {
+        animation: fade-in 0.8s ease-in-out;
+      }
+    </style>
+    <script>
+      const track = document.getElementById("industryTrack");
+      const nextBtn = document.getElementById("nextBtn");
+      const prevBtn = document.getElementById("prevBtn");
+
+      // Duplicate for infinite scroll effect
+      track.innerHTML += track.innerHTML;
+
+      let scrollAmount = 0;
+      const slideSpeed = 0.6; // pixels per frame
+      let autoSlide;
+      let isDragging = false;
+      let startX, scrollStart;
+
+      // Continuous auto-scroll
+      function autoScroll() {
+        scrollAmount += slideSpeed;
+        if (scrollAmount >= track.scrollWidth / 2) scrollAmount = 0;
+        track.style.transform = `translateX(-${scrollAmount}px)`;
+        autoSlide = requestAnimationFrame(autoScroll);
+      }
+
+      function startAuto() {
+        if (!autoSlide) autoSlide = requestAnimationFrame(autoScroll);
+      }
+
+      function stopAuto() {
+        cancelAnimationFrame(autoSlide);
+        autoSlide = null;
+      }
+
+      function manualScroll(distance) {
+        stopAuto();
+        scrollAmount += distance;
+        if (scrollAmount >= track.scrollWidth / 2) scrollAmount = 0;
+        if (scrollAmount < 0) scrollAmount = track.scrollWidth / 2 - 1;
+        track.style.transition = "transform 0.5s ease-out";
+        track.style.transform = `translateX(-${scrollAmount}px)`;
+        setTimeout(() => {
+          track.style.transition = "none";
+          startAuto();
+        }, 600);
+      }
+
+      if (nextBtn) nextBtn.addEventListener("click", () => manualScroll(250));
+      if (prevBtn) prevBtn.addEventListener("click", () => manualScroll(-250));
+
+      // Touch / Swipe
+      track.addEventListener("touchstart", (e) => {
+        stopAuto();
+        isDragging = true;
+        startX = e.touches[0].pageX;
+        scrollStart = scrollAmount;
+      });
+
+      track.addEventListener("touchmove", (e) => {
+        if (!isDragging) return;
+        const moveX = e.touches[0].pageX;
+        const walk = startX - moveX;
+        scrollAmount = scrollStart + walk;
+        if (scrollAmount >= track.scrollWidth / 2) scrollAmount = 0;
+        if (scrollAmount < 0)
+          scrollAmount = track.scrollWidth / 2 + scrollAmount;
+        track.style.transform = `translateX(-${scrollAmount}px)`;
+      });
+
+      track.addEventListener("touchend", () => {
+        isDragging = false;
+        startAuto();
+      });
+
+      track.addEventListener("mouseenter", stopAuto);
+      track.addEventListener("mouseleave", startAuto);
+
+      // Start animation
+      startAuto();
+    </script>
+
+    <script>
+      const btn = document.getElementById("menu-btn");
+      const menu = document.getElementById("mobile-menu");
+      btn.addEventListener("click", () => {
+        menu.classList.toggle("hidden");
+      });
+
+      // Auto-highlight active page
+      const currentPage = location.pathname.split("/").pop();
+      document.querySelectorAll("nav a").forEach((link) => {
+        if (link.getAttribute("href") === currentPage) {
+          link.classList.add("bg-[#ed1e28]", "text-white");
+        } else {
+          link.classList.remove("bg-[#ed1e28]", "text-white");
+        }
+      });
+    </script>
+    <!-- Services Preview -->
+    <section class="bg-[#E8EAF0] py-12 md:py-20 px-4 md:px-8">
+      <div
+        class="flex flex-col md:flex-row justify-center items-center gap-4 md:gap-6 max-w-7xl mx-auto"
+      >
+        <img
+          src="images/modal.jpg"
+          class="w-full md:w-1/2 h-auto max-h-[300px] md:max-h-[400px] object-cover rounded-lg"
+        />
+        <div
+          class="sec-text bg-[#2C3674] w-full md:w-1/2 space-y-4 text-white p-6 md:p-8 lg:p-10 rounded-lg md:max-h-[400px] md:min-h-[300px] flex flex-col justify-center"
+        >
+          <h1 class="uppercase text-white font-bold text-2xl md:text-3xl">
+            Intermodal
+          </h1>
+          <p class="text-white leading-7 md:leading-8 text-sm md:text-base">
+            Transport involves the transportation of freight in an intermodal
+            container or vehicle, using multiple modes of transportation (rail,
+            ship, and truck), without any handling of the freight itself when
+            changing modes.
+          </p>
+        </div>
+      </div>
+    </section>
+    <!-- Card 1 -->
+    <section class="py-20 px-6 sm:px-10 md:px-16 lg:px-20">
+      <div
+        class="grid gap-4 sm:gap-8 md:gap-10 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 justify-items-center"
+      >
+        <div
+          class="bg-[#2C3674] h-[268px] w-full max-w-[300px] flex gap-y-6 flex-col justify-center items-center text-white font-bold text-2xl uppercase text-center rounded-2xl shadow-lg transition-transform duration-300 hover:scale-105 hover:shadow-2xl relative"
+        >
+          <img
+            src="images/icon1.png"
+            alt="Container Drayage"
+            class="mb-3 w-20 h-20 object-contain"
+          />
+          <p class="text-white">Container<br />Drayage</p>
+        </div>
+
+        <!-- Card 2 -->
+        <div
+          class="bg-[#E8002C] h-[268px] w-full max-w-[300px] flex flex-col justify-center items-center text-white font-bold text-2xl uppercase text-center rounded-2xl shadow-lg transition-transform duration-300 hover:scale-105 hover:shadow-2xl relative"
+        >
+          <img
+            src="images/icon2.png"
+            alt="Container Drayage"
+            class="mb-3 w-20 h-[120px] object-contain"
+          />
+          <p class="text-white">Full Truck<br />Load (FTL)</p>
+          <div class="absolute bottom-4 right-4"></div>
+        </div>
+
+        <!-- Card 3 -->
+        <div
+          class="bg-[#2C3674] h-[268px] w-full max-w-[300px] gap-y-6 flex flex-col justify-center items-center text-white font-bold text-2xl uppercase text-center rounded-2xl shadow-lg transition-transform duration-300 hover:scale-105 hover:shadow-2xl relative"
+        >
+          <img
+            src="images/icon3.png"
+            alt="Container Drayage"
+            class="mb-3 w-20 h-20 object-contain"
+          />
+          <p class="text-white">Less Than<br />Truck Load (LTL)</p>
+          <div class="absolute bottom-4 right-4"></div>
+        </div>
+
+        <!-- Card 4 -->
+        <div
+          class="bg-[#E8002C] h-[268px] w-full max-w-[300px] gap-y-6 flex flex-col justify-center items-center text-white font-bold text-2xl uppercase text-center rounded-2xl shadow-lg transition-transform duration-300 hover:scale-105 hover:shadow-2xl relative"
+        >
+          <img
+            src="images/icon4.png"
+            alt="Container Drayage"
+            class="mb-3 w-20 h-20 object-contain"
+          />
+          <p class="text-white">Palletize and<br />Shrink Wrap</p>
+          <div class="absolute bottom-4 right-4"></div>
+        </div>
+
+        <!-- Repeat for remaining cards -->
+        <div
+          class="bg-[#2C3674] h-[268px] w-full max-w-[300px] gap-y-6 flex flex-col justify-center items-center text-white font-bold text-2xl uppercase text-center rounded-2xl shadow-lg transition-transform duration-300 hover:scale-105 hover:shadow-2xl relative"
+        >
+          <img
+            src="images/icon5.png"
+            alt="Container Drayage"
+            class="mb-3 w-20 h-20 object-contain"
+          />
+          <p class="text-white">Transloading</p>
+          <div class="absolute bottom-4 right-4"></div>
+        </div>
+        <div
+          class="bg-[#E8002C] h-[268px] w-full max-w-[300px] gap-y-6 flex flex-col justify-center items-center text-white font-bold text-2xl uppercase text-center rounded-2xl shadow-lg transition-transform duration-300 hover:scale-105 hover:shadow-2xl relative"
+        >
+          <img
+            src="images/icon6.png"
+            alt="Container Drayage"
+            class="mb-3 w-20 h-20 object-contain"
+          />
+          <p class="text-white">Reefer Containers/<br />Trailers</p>
+          <div class="absolute bottom-4 right-4"></div>
+        </div>
+        <div
+          class="bg-[#2C3674] h-[268px] w-full max-w-[300px] gap-y-6 flex flex-col justify-center items-center text-white font-bold text-2xl uppercase text-center rounded-2xl shadow-lg transition-transform duration-300 hover:scale-105 hover:shadow-2xl relative"
+        >
+          <img
+            src="images/icon7.png"
+            alt="Container Drayage"
+            class="mb-3 w-20 h-20 object-contain"
+          />
+          <p class="text-white">Alcohol<br />Permits</p>
+          <div class="absolute bottom-4 right-4"></div>
+        </div>
+        <div
+          class="bg-[#E8002C] h-[268px] w-full max-w-[300px] gap-y-6 flex flex-col justify-center items-center text-white font-bold text-2xl uppercase text-center rounded-2xl shadow-lg transition-transform duration-300 hover:scale-105 hover:shadow-2xl relative"
+        >
+          <img
+            src="images/icon8.png"
+            alt="Container Drayage"
+            class="mb-3 w-20 h-20object-contain"
+          />
+          <p class="text-white">Airport<br />Pickups</p>
+          <div class="absolute bottom-4 right-4"></div>
+        </div>
+        <div
+          class="bg-[#2C3674] h-[268px] w-full max-w-[300px] gap-y-6 flex flex-col justify-center items-center text-white font-bold text-2xl uppercase text-center rounded-2xl shadow-lg transition-transform duration-300 hover:scale-105 hover:shadow-2xl relative"
+        >
+          <img
+            src="images/icon9.png"
+            alt="Container Drayage"
+            class="mb-3 w-20 h-20 object-contain"
+          />
+          <p class="text-white">Container<br />Storage</p>
+          <div class="absolute bottom-4 right-4"></div>
+        </div>
+        <div
+          class="bg-[#E8002C] h-[268px] w-full max-w-[300px] gap-y-6 flex flex-col justify-center items-center text-white font-bold text-2xl uppercase text-center rounded-2xl shadow-lg transition-transform duration-300 hover:scale-105 hover:shadow-2xl relative"
+        >
+          <img
+            src="images/icon10.png"
+            alt="Container Drayage"
+            class="mb-3 w-20 h-20 object-contain"
+          />
+          <p class="text-white">Export<br />Stuffing</p>
+          <div class="absolute bottom-4 right-4"></div>
+        </div>
+        <div
+          class="bg-[#2C3674] h-[268px] w-full max-w-[300px] gap-y-6 flex flex-col justify-center items-center text-white font-bold text-2xl uppercase text-center rounded-2xl shadow-lg transition-transform duration-300 hover:scale-105 hover:shadow-2xl relative"
+        >
+          <img
+            src="images/icon11.png"
+            alt="Container Drayage"
+            class="mb-3 w-20 h-20 object-contain"
+          />
+          <p class="text-white">Hazmat</p>
+          <div class="absolute bottom-4 right-4"></div>
+        </div>
+        <div
+          class="bg-[#E8002C] h-[268px] w-full max-w-[300px] gap-y-6 flex flex-col justify-center items-center text-white font-bold text-2xl uppercase text-center rounded-2xl shadow-lg transition-transform duration-300 hover:scale-105 hover:shadow-2xl relative"
+        >
+          <img
+            src="images/icon12.png"
+            alt="Container Drayage"
+            class="mb-3 w-20 h-20object-contain"
+          />
+          <p class="text-white">Flatbed</p>
+          <div class="absolute bottom-4 right-4"></div>
+        </div>
+
+        <div
+          class="bg-[#2C3674] h-[268px] w-full max-w-[300px] gap-y-6 flex flex-col justify-center items-center text-white font-bold text-2xl uppercase text-center rounded-2xl shadow-lg transition-transform duration-300 hover:scale-105 hover:shadow-2xl relative"
+        >
+          <img
+            src="images/icon13.png"
+            alt="Container Drayage"
+            class="mb-3 w-20 h-20 object-contain"
+          />
+          <p class="text-white">Partials</p>
+          <div class="absolute bottom-4 right-4"></div>
+        </div>
+        <div
+          class="bg-[#E8002C] h-[268px] w-full max-w-[300px] gap-y-6 flex flex-col justify-center items-center text-white font-bold text-2xl uppercase text-center rounded-2xl shadow-lg transition-transform duration-300 hover:scale-105 hover:shadow-2xl relative"
+        >
+          <img
+            src="images/icon14.png"
+            alt="Container Drayage"
+            class="mb-3 w-20 h-20 object-contain"
+          />
+          <p class="text-white py-xl-5">Overweight</p>
+          <div class="absolute bottom-4 right-4"></div>
+        </div>
+      </div>
+    </section>
+    <section class="px-4 md:px-8">
+      <section
+        class="flex flex-col lg:flex-row justify-between gap-4 md:gap-6 py-12 md:py-20 lg:py-28 max-w-7xl mx-auto"
+      >
+        <!-- Left Blue Box -->
+        <div
+          class="bg-[#2C3674] flex flex-col justify-center items-center text-center py-10 lg:py-12 lg:w-1/2 space-y-6 min-h-[300px] lg:min-h-[350px] shadow-xl rounded-lg px-6 md:px-8"
+        >
+          <h1
+            class="uppercase text-lg sm:text-xl md:text-2xl lg:text-[22px] text-white font-bold leading-relaxed max-w-2xl"
+          >
+            With creative and unique solutions, multitude of carriers we
+            guarantee to meet transportation need anytime, anywhere.
+          </h1>
+
+          <p
+            class="text-[#FFD60A] font-semibold text-base sm:text-lg break-all"
+          >
+            ✉️ info@citylinxlogistics.com
+          </p>
+
+          <div class="flex flex-wrap justify-center gap-4">
+            <button
+              class="bg-[#E8002C] text-white px-6 py-3 rounded-full font-semibold hover:bg-[#c10024] transition-all duration-300"
+            >
+              QUICK QUOTE
+            </button>
+          </div>
+        </div>
+
+        <div class="lg:w-1/2 w-full">
+          <img
+            src="images/truck.png"
+            alt="Transportation Truck"
+            class="object-cover w-full h-auto min-h-[300px] lg:min-h-[350px] max-h-[400px] lg:max-h-full shadow-xl rounded-lg"
+          />
+        </div>
+      </section>
+    </section>
+
+    <footer class="bg-indigo-900 text-white py-8">
+      <div class="container mx-auto px-4">
+        <!-- Main Footer Content -->
+        <div
+          class="flex flex-col md:flex-row justify-between gap-8"
+          style="font-family: 'Josefin Sans', sans-serif"
+        >
+          <!-- Information Section -->
+          <div class="md:w-1/3">
+            <h2
+              class="text-2xl font-extrabold uppercase mb-6 text-white tracking-wide"
+            >
+              Information
+            </h2>
+
+            <ul
+              class="space-y-2"
+              style="font-family: 'League Spartan', sans-serif"
+            >
+              <li>
+                <a
+                  href="index.html"
+                  class="text-red-500 font-semibold transition-colors duration-150 ease-in-outt"
+                  >Home</a
+                >
+              </li>
+              <li>
+                <a
+                  href="about.html"
+                  class="text-white hover:text-red-500 transition-colors duration-150 ease-in-ou"
+                  >About Us</a
+                >
+              </li>
+              <li>
+                <a
+                  href="services.html"
+                  class="text-white hover:text-red-500 transition-colors duration-150 ease-in-out"
+                  >Our Services</a
+                >
+              </li>
+              <li>
+                <a
+                  href="become-a-carrier.html"
+                  class="text-white hover:text-red-500 transition-colors duration-150 ease-in-out"
+                  >Become A Carrier</a
+                >
+              </li>
+              <li>
+                <a
+                  href="contact.html"
+                  class="text-white hover:text-red-500 transition-colors duration-150 ease-in-out"
+                  >Contact Us</a
+                >
+              </li>
+            </ul>
+          </div>
+          <script src="https://unpkg.com/lucide@latest"></script>
+
+          <div class="md:w-1/3 text-white">
+            <h2 class="text-2xl font-extrabold uppercase mb-6 tracking-wide">
+              Keep In Touch
+            </h2>
+
+            <ul
+              class="space-y-3 text-[15px]"
+              style="font-family: 'League Spartan', sans-serif"
+            >
+              <!-- EMAIL -->
+              <li class="flex items-center space-x-2">
+                <i data-lucide="mail" class="w-5 h-5 text-red-500"></i>
+                <span>E-mail : </span>
+                <a
+                  href="mailto:info@citylinxlogistics.com"
+                  class="transition-colors duration-300 ease-in-out hover:text-red-500 cursor-pointer"
+                >
+                  info@citylinxlogistics.com
+                </a>
+              </li>
+
+              <!-- ADDRESS -->
+              <li class="flex items-center space-x-2">
+                <i data-lucide="map-pin" class="w-5 h-5 text-red-500"></i>
+                <a
+                  href="https://maps.google.com/?q=30 N Gould St Ste R, Sheridan, WY 82801, USA"
+                  target="_blank"
+                  class="transition-colors duration-300 ease-in-out hover:text-red-500 cursor-pointer"
+                >
+                  30 N Gould St Ste R<br />Sheridan, WY 82801<br />USA
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <script>
+            lucide.createIcons();
+          </script>
+
+          <!-- Contact Us Section -->
+          <div class="md:w-1/3">
+            <h2 class="text-xl font-bold uppercase mb-4">Contact Us</h2>
+            <form
+              class="space-y-4"
+              style="font-family: 'League Spartan', sans-serif"
+            >
+              <input
+                type="text"
+                placeholder="Name"
+                class="w-full bg-transparent border-b border-gray-400 pb-2 focus:outline-none text-white"
+              />
+              <input
+                type="email"
+                placeholder="E-mail"
+                class="w-full bg-transparent border-b border-gray-400 pb-2 focus:outline-none text-white"
+              />
+              <textarea
+                placeholder="Message"
+                class="w-full bg-transparent border-b border-gray-400 pb-2 focus:outline-none text-white h-20 resize-none"
+              ></textarea>
+              <button
+                type="submit"
+                class="bg-red-500 text-white px-6 py-2 rounded-full font-bold hover:bg-red-600 transition-colors duration-200 ease-in-out"
+              >
+                SEND
+              </button>
+            </form>
+          </div>
+        </div>
+
+        <!-- Copyright Section -->
+        <div
+          class="mt-8 flex justify-start items-end text-[10px] text-gray-500"
+        ></div>
+      </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button
+      onclick="window.scrollTo({top: 0, behavior: 'smooth'})"
+      class="back-to-top-btn fixed bottom-5 right-5 bg-[#ed1e28] text-white p-3 rounded-full shadow-lg hover:bg-[#d61a22] transition-all duration-300 z-50"
+      style="display: none; opacity: 0"
+      title="Back to top"
+    >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke-width="2"
+        stroke="currentColor"
+        class="w-6 h-6"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M4.5 15.75l7.5-7.5 7.5 7.5"
+        />
+      </svg>
+    </button>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,661 @@
+  <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CityLinx - Become a Carrier</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+
+  <body class="font-sans text-gray-800 overflow-x-hidden">
+    <!-- Navbar -->
+    <header class="w-full h-[142px]  bg-white shadow-sm fixed top-0 left-0 z-50">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex items-center justify-between py-3 md:py-2">
+      <!-- Logo -->
+      <a href="#" class="flex items-center">
+        <img
+          src="images/city_Linx_Logo_Photo-removebg-preview.png"
+          alt="City Logistics Logo"
+          class="h-[150px] w-[240px] ml-[30px]"
+        />
+      </a>
+
+      <!-- Mobile Menu Button -->
+      <button
+        id="menu-btn"
+        class="block md:hidden text-gray-800 focus:outline-none p-2 rounded-md hover:bg-gray-200 transition"
+      >
+        <svg
+          id="menu-icon"
+          xmlns="http://www.w3.org/2000/svg"
+          class="h-7 w-7"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+          stroke-width="2"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M4 6h16M4 12h16M4 18h16"
+          />
+        </svg>
+      </button>
+
+      <!-- Desktop Navigation -->
+      <nav
+        id="menu"
+        class="hidden md:flex space-x-1 font-semibold text-[13px] lg:text-sm uppercase tracking-wide"
+      >
+        <a
+          href="index.html"
+          class="px-4 py-2 rounded-full hover:bg-[#ed1e28] hover:text-white transition-all duration-300"
+          >Home</a
+        >
+        <a
+          href="about.html"
+          class="px-4 py-2 rounded-full hover:bg-[#ed1e28] hover:text-white transition-all duration-300"
+          >About Us</a
+        >
+        <a
+          href="services.html"
+          class="px-4 py-2 rounded-full hover:bg-[#ed1e28] hover:text-white transition-all duration-300"
+          >Our Services</a
+        >
+        <a
+          href="become-a-carrier.html"
+          class="px-4 py-2 rounded-full bg-[#ed1e28] hover:text-white transition-all duration-300"
+          >Become a Carrier</a
+        >
+        <a
+          href="contact.html"
+          class="px-4 py-2 rounded-full hover:bg-[#ed1e28] hover:text-white transition-all duration-300"
+          >Contact Us</a
+        >
+      </nav>
+    </div>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div
+    id="mobile-menu"
+    class="hidden md:hidden bg-white border-t border-gray-200 shadow-md"
+  >
+    <nav
+      class="flex flex-col space-y-1 py-3 px-4 text-sm font-semibold uppercase tracking-wide"
+    >
+      <a
+        href="index.html"
+        class="px-3 py-2 rounded-md bg-[#ed1e28] text-white transition-all duration-300"
+        >Home</a
+      >
+      <a
+        href="about.html"
+        class="px-3 py-2 rounded-md hover:bg-[#ed1e28] hover:text-white transition-all duration-300"
+        >About Us</a
+      >
+      <a
+        href="services.html"
+        class="px-3 py-2 rounded-md hover:bg-[#ed1e28] hover:text-white transition-all duration-300"
+        >Our Services</a
+      >
+      <a
+        href="become-a-carrier.html"
+        class="px-3 py-2 rounded-md hover:bg-[#ed1e28] hover:text-white transition-all duration-300"
+        >Become a Carrier</a
+      >
+      <a
+        href="contact.html"
+        class="px-3 py-2 rounded-md hover:bg-[#ed1e28] hover:text-white transition-all duration-300"
+        >Contact Us</a
+      >
+    </nav>
+  </div>
+</header>
+    <!-- Hero Section -->
+    <section class="relative w-full">
+      <img
+        src="images/new2.png"
+        alt="Port Image"
+        class="w-full h-[650px] object-cover"
+      />
+      <div
+        class="max-w-6xl mx-auto bg-white p-4 md:p-6 lg:p-8 rounded-lg shadow-md space-y-8 md:space-y-12"
+        style="font-family: 'League Spartan', sans-serif"
+      >
+        <!-- HEADER -->
+        <div class="text-center">
+          <hr class="my-3 md:my-5 mx-auto border-gray-300 w-3/4" />
+        </div>
+
+        <!-- CARRIER FORM -->
+        <h1 class="text-black font-bold text-2xl mb-2">Become a Carrier</h1>
+        <form
+          class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6"
+          id="carrierForm"
+        >
+          <div>
+            <label class="block text-gray-700 mb-1 text-sm md:text-base"
+              >First name *</label
+            >
+            <input
+              type="text"
+              name="firstName"
+              placeholder="Enter first name"
+              required
+              class="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 text-sm md:text-base"
+            />
+          </div>
+
+          <div>
+            <label class="block text-gray-700 mb-1 text-sm md:text-base"
+              >Last name *</label
+            >
+            <input
+              type="text"
+              name="lastName"
+              placeholder="Enter last name"
+              required
+              class="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 text-sm md:text-base"
+            />
+          </div>
+
+          <!-- <div>
+            <label class="block text-gray-700 mb-1 text-sm md:text-base"
+              >Middle name</label
+            >
+            <input
+              type="text"
+              name="middleName"
+              placeholder="Enter middle name"
+              class="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 text-sm md:text-base"
+            />
+          </div> -->
+
+          <div>
+            <label class="block text-gray-700 mb-1 text-sm md:text-base"
+              >Suffix</label
+            >
+            <select
+              name="suffix"
+              class="w-full px-3 py-2 border border-gray-300 rounded-md text-gray-500 focus:ring-2 focus:ring-blue-500 text-sm md:text-base"
+            >
+              <option value="">—Please choose an option—</option>
+              <option value="Jr.">Jr.</option>
+              <option value="Sr.">Sr.</option>
+              <option value="II">II</option>
+              <option value="III">III</option>
+            </select>
+          </div>
+
+          <div class="md:col-span-1">
+            <label class="block text-gray-700 mb-1 text-sm md:text-base"
+              >Address *</label
+            >
+            <input
+              type="text"
+              name="address"
+              placeholder="Enter address here"
+              required
+              class="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 text-sm md:text-base"
+            />
+          </div>
+
+          <div>
+            <label class="block text-gray-700 mb-1 text-sm md:text-base"
+              >City *</label
+            >
+            <input
+              type="text"
+              name="city"
+              placeholder="Enter city here"
+              required
+              class="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 text-sm md:text-base"
+            />
+          </div>
+
+          <div>
+            <label class="block text-gray-700 mb-1 text-sm md:text-base"
+              >Zip/postal code *</label
+            >
+            <input
+              type="text"
+              name="zipCode"
+              placeholder="Enter zip code here"
+              required
+              class="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 text-sm md:text-base"
+            />
+          </div>
+
+          <div>
+            <label class="block text-gray-700 mb-1 text-sm md:text-base"
+              >Country *</label
+            >
+            <input
+              type="text"
+              name="country"
+              placeholder="Enter country here"
+              required
+              class="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 text-sm md:text-base"
+            />
+          </div>
+
+          <!-- <div>
+            <label class="block text-gray-700 mb-1 text-sm md:text-base"
+              >State *</label
+            >
+            <input
+              type="text"
+              name="state"
+              placeholder="Enter state/province here"
+              required
+              class="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 text-sm md:text-base"
+            />
+          </div> -->
+        </form>
+
+        <!-- CARRIER INFO -->
+        
+
+            
+          </div>
+        </div>
+
+        <!-- CONTACT DETAILS -->
+        <div class="bg-gray-50 p-4 md:p-6 lg:p-8 rounded-lg">
+          <div
+            class="bg-red-600 text-white text-center py-2 md:py-3 text-base md:text-lg uppercase tracking-wide rounded-md"
+          >
+            Contact Details
+          </div>
+
+          <p class="text-gray-800 text-xs md:text-sm mt-3 md:mt-4 mb-4 md:mb-6">
+            Fill in both fields if your cell phone is also your primary phone.
+          </p>
+
+          <form class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
+            <div>
+              <label class="block text-gray-700 mb-1 text-sm md:text-base"
+                >Primary phone number *</label
+              >
+              <div class="flex">
+                <span
+                  class="inline-flex items-center px-2 md:px-3 border border-r-0 border-gray-300 bg-gray-50 text-gray-600 rounded-l-md text-sm md:text-base"
+                  >🇺🇸 +1</span
+                >
+                <input
+                  type="tel"
+                  name="primaryPhone"
+                  placeholder="Phone number"
+                  required
+                  class="w-full px-3 py-2 border border-gray-300 rounded-r-md focus:ring-2 focus:ring-blue-500 text-sm md:text-base"
+                />
+              </div>
+            </div>
+
+            <div>
+              <label class="block text-gray-700 mb-1 text-sm md:text-base"
+                >Cell phone</label
+              >
+              <div class="flex">
+                <span
+                  class="inline-flex items-center px-2 md:px-3 border border-r-0 border-gray-300 bg-gray-50 text-gray-600 rounded-l-md text-sm md:text-base"
+                  >🇺🇸 +1</span
+                >
+                <input
+                  type="tel"
+                  name="cellPhone"
+                  placeholder="Phone number"
+                  class="w-full px-3 py-2 border border-gray-300 rounded-r-md focus:ring-2 focus:ring-blue-500 text-sm md:text-base"
+                />
+              </div>
+            </div>
+
+            <div>
+              <label class="block text-gray-700 mb-1 text-sm md:text-base"
+                >Email address *</label
+              >
+              <input
+                type="email"
+                name="email"
+                placeholder="Enter email here"
+                required
+                class="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 text-sm md:text-base"
+              />
+            </div>
+
+            <div>
+              <label class="block text-gray-700 mb-1 text-sm md:text-base"
+                >Confirm email address</label
+              >
+              <input
+                type="email"
+                name="confirmEmail"
+                placeholder="Enter email here"
+                class="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 text-sm md:text-base"
+              />
+            </div>
+          </form>
+
+          <button
+            type="submit"
+            class="mt-6 md:mt-8 bg-red-600 text-white text-base md:text-lg px-6 md:px-8 py-2 md:py-3 rounded-md hover:bg-red-700 transition font-semibold w-full md:w-auto"
+          >
+            Submit
+          </button>
+
+          <p
+            class="mt-4 md:mt-6 font-normal text-sm md:text-base lg:text-[18px] text-black leading-relaxed"
+          >
+            <span class="font-semibold">Note –</span> At CityLinx, we are moving
+            3000+ Containers and Truck Loads each month covering all 48 States
+            of US and Canada, always there to support you.
+          </p>
+        </div>
+      </div>
+    </section>
+    <!-- footer  -->
+    <footer class="bg-indigo-900 text-white py-8">
+      <div class="container mx-auto px-4">
+        <!-- Main Footer Content -->
+        <div
+          class="flex flex-col md:flex-row justify-between gap-8"
+          style="font-family: 'Josefin Sans', sans-serif"
+        >
+          <!-- Information Section -->
+          <div class="md:w-1/3">
+            <h2
+              class="text-2xl font-extrabold uppercase mb-6 text-white tracking-wide"
+            >
+              Information
+            </h2>
+
+            <ul
+              class="space-y-2"
+              style="font-family: 'League Spartan', sans-serif"
+            >
+              <li>
+                <a
+                  href="index.html"
+                  class="text-white hover:text-red-500 transition-colors duration-150 ease-in-out"
+                  >Home</a
+                >
+              </li>
+              <li>
+                <a
+                  href="about.html"
+                  class="text-white hover:text-red-500 transition-colors duration-150 ease-in-out"
+                  >About Us</a
+                >
+              </li>
+              <li>
+                <a
+                  href="services.html"
+                  class="text-white hover:text-red-500 transition-colors duration-150 ease-in-out"
+                  >Our Services</a
+                >
+              </li>
+              <li>
+                <a
+                  href="become-a-carrier.html"
+                  class="text-red-500 font-semibold transition-colors duration-150 ease-in-out"
+                  >Become A Carrier</a
+                >
+              </li>
+              <li>
+                <a
+                  href="contact.html"
+                  class="text-white hover:text-red-500 transition-colors duration-150 ease-in-out"
+                  >Contact Us</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Keep In Touch Section -->
+          <!-- Lucide Icons CDN -->
+          <script src="https://unpkg.com/lucide@latest"></script>
+
+          <div class="md:w-1/3 text-white">
+            <h2 class="text-2xl font-extrabold uppercase mb-6 tracking-wide">
+              Keep In Touch
+            </h2>
+
+            <ul
+              class="space-y-3 text-[15px]"
+              style="font-family: 'League Spartan', sans-serif"
+            >
+              <!-- EMAIL -->
+              <li class="flex items-center space-x-2">
+                <i data-lucide="mail" class="w-5 h-5 text-red-500"></i>
+                <span>E-mail: </span>
+                <a
+                  href="mailto:info@citylinxlogistics.com"
+                  class="transition-colors duration-300 ease-in-out hover:text-red-500 cursor-pointer"
+                >
+                  info@citylinxlogistics.com
+                </a>
+              </li>
+
+              <!-- ADDRESS -->
+              <li class="flex items-center space-x-2">
+                <i data-lucide="map-pin" class="w-5 h-5 text-red-500"></i>
+                <a
+                  href="https://maps.google.com/?q=30 N Gould St Ste R, Sheridan, WY 82801, USA"
+                  target="_blank"
+                  class="transition-colors duration-300 ease-in-out hover:text-red-500 cursor-pointer"
+                >
+                  30 N Gould St Ste R<br />Sheridan, WY 82801<br />USA
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <script>
+            lucide.createIcons();
+          </script>
+
+          <!-- Contact Us Section -->
+          <div class="md:w-1/3">
+            <h2 class="text-xl font-bold uppercase mb-4">Contact Us</h2>
+            <form
+              class="space-y-4"
+              style="font-family: 'League Spartan', sans-serif"
+            >
+              <input
+                type="text"
+                placeholder="Name"
+                class="w-full bg-transparent border-b border-gray-400 pb-2 focus:outline-none text-white"
+              />
+              <input
+                type="email"
+                placeholder="E-mail"
+                class="w-full bg-transparent border-b border-gray-400 pb-2 focus:outline-none text-white"
+              />
+              <textarea
+                placeholder="Message"
+                class="w-full bg-transparent border-b border-gray-400 pb-2 focus:outline-none text-white h-20 resize-none"
+              ></textarea>
+              <button
+                type="submit"
+                class="bg-red-500 text-white px-6 py-2 rounded-full font-bold hover:bg-red-600 transition-colors duration-200 ease-in-out"
+              >
+                SEND
+              </button>
+            </form>
+          </div>
+        </div>
+
+        <!-- Copyright Section -->
+        <div
+          class="mt-8 flex justify-start items-end text-[10px] text-gray-500"
+        >
+          <div
+            class="text-left flex-grow font-light"
+            style="font-family: 'Josefin Sans', sans-serif"
+          >
+            <p>© Copyright 2025, CITYLINX LLC | SITE MAP</p>
+            <p>WEBSITE DESIGN | WEBCREATIONUS.COM</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- Back to Top Button -->
+    <button
+      onclick="window.scrollTo({top: 0, behavior: 'smooth'})"
+      class="back-to-top-btn fixed bottom-5 right-5 bg-[#ed1e28] text-white p-3 rounded-full shadow-lg hover:bg-[#d61a22] transition-all duration-300 z-50"
+      style="display: none; opacity: 0"
+      title="Back to top"
+    >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke-width="2"
+        stroke="currentColor"
+        class="w-6 h-6"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M4.5 15.75l7.5-7.5 7.5 7.5"
+        />
+      </svg>
+    </button>
+    <script>
+      // Carrier application form handling
+      document.addEventListener("DOMContentLoaded", function () {
+        const carrierForm = document.getElementById("carrierForm");
+        const contactForm = document.querySelector(".bg-gray-50 form");
+        const submitButton = document.querySelector('button[type="submit"]');
+
+        if (carrierForm && contactForm && submitButton) {
+          submitButton.addEventListener("click", async function (e) {
+            e.preventDefault();
+
+            // Collect all form data
+            const formData = new FormData();
+
+            // Get data from carrier form
+            const carrierInputs = carrierForm.querySelectorAll("input, select");
+            carrierInputs.forEach((input) => {
+              if (input.name) {
+                formData.append(input.name, input.value);
+              }
+            });
+
+            // Get data from contact form
+            const contactInputs = contactForm.querySelectorAll("input, select");
+            contactInputs.forEach((input) => {
+              if (input.name) {
+                formData.append(input.name, input.value);
+              }
+            });
+
+            // Validate required fields
+            const requiredFields = [
+              "firstName",
+              "lastName",
+              "carrierName",
+              "primaryPhone",
+              "email",
+            ];
+            const missingFields = [];
+
+            requiredFields.forEach((field) => {
+              if (!formData.get(field)) {
+                missingFields.push(field);
+              }
+            });
+
+            if (missingFields.length > 0) {
+              alert(
+                `Please fill in the following required fields: ${missingFields.join(
+                  ", "
+                )}`
+              );
+              return;
+            }
+
+            // Validate email format
+            const email = formData.get("email");
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(email)) {
+              alert("Please enter a valid email address");
+              return;
+            }
+
+            // Show loading state
+            submitButton.textContent = "Submitting...";
+            submitButton.disabled = true;
+
+            try {
+              const response = await fetch(
+                "http://localhost:5000/submitCarrierApplication",
+                {
+                  method: "POST",
+                  headers: {
+                    "Content-Type": "application/json",
+                  },
+                  body: JSON.stringify(Object.fromEntries(formData)),
+                }
+              );
+
+              const result = await response.json();
+
+              if (result.success) {
+                alert(
+                  "Thank you! Your carrier application has been submitted successfully. We will contact you soon."
+                );
+                // Reset forms
+                carrierForm.reset();
+                contactForm.reset();
+              } else {
+                alert(`Error: ${result.message}`);
+              }
+            } catch (error) {
+              console.error("Error submitting application:", error);
+              alert(
+                "Sorry, there was an error submitting your application. Please try again later."
+              );
+            } finally {
+              // Reset button state
+              submitButton.textContent = "Submit";
+              submitButton.disabled = false;
+            }
+          });
+        }
+      });
+
+      // Back to top button functionality
+      const backToTopBtn = document.querySelector(".back-to-top-btn");
+      if (backToTopBtn) {
+        window.addEventListener("scroll", function () {
+          if (window.scrollY > 300) {
+            backToTopBtn.style.display = "block";
+            backToTopBtn.style.opacity = "1";
+          } else {
+            backToTopBtn.style.opacity = "0";
+            setTimeout(() => {
+              if (window.scrollY <= 300) {
+                backToTopBtn.style.display = "none";
+              }
+            }, 300);
+          }
+        });
+      }
+    </script>
+    <script>
+  const menuBtn = document.getElementById("menu-btn");
+  const mobileMenu = document.getElementById("mobile-menu");
+
+  menuBtn.addEventListener("click", () => {
+    mobileMenu.classList.toggle("hidden");
+  });
+</script>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>

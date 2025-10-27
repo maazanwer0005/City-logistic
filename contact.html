@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CityLinx - Contact Us</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="font-sans text-gray-800 overflow-x-hidden">
+    <!-- Navbar -->
+    <header
+      class="w-full h-[142px] bg-white shadow-sm fixed top-0 left-0 z-[9999]"
+    >
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between py-2">
+          <!-- Logo -->
+          <a href="#" class="flex items-center space-x-2">
+            <img
+              src="images/city_Linx_Logo_Photo-removebg-preview.png"
+              alt="City Logistics Logo"
+              class="h-[150px] w-[240px] ml-[30px]"
+            />
+          </a>
+
+          <!-- Menu Button (Mobile) -->
+          <button
+            id="menu-btn"
+            class="block md:hidden text-gray-800 focus:outline-none"
+          >
+            <svg
+              class="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M4 6h16M4 12h16M4 18h16"
+              ></path>
+            </svg>
+          </button>
+
+          <!-- Desktop Navigation -->
+          <nav
+            id="menu"
+            class="hidden md:flex space-x-1 font-semibold text-sm uppercase tracking-wide"
+          >
+            <a
+              href="index.html"
+              class="px-5 py-2 rounded-full hover:bg-[#ed1e28] text-white transition-all duration-300"
+              >Home</a
+            >
+            <a
+              href="about.html"
+              class="px-5 py-2 rounded-full hover:bg-[#ed1e28] hover:text-white transition-all duration-300"
+              >About Us</a
+            >
+            <a
+              href="services.html"
+              class="px-5 py-2 rounded-full hover:bg-[#ed1e28] hover:text-white transition-all duration-300"
+              >Our Services</a
+            >
+            <a
+              href="become-a-carrier.html"
+              class="px-5 py-2 rounded-full hover:bg-[#ed1e28] hover:text-white transition-all duration-300"
+              >Become a Carrier</a
+            >
+            <a
+              href="contact.html"
+              class="px-5 py-2 rounded-full hover:bg-[#ed1e28] hover:text-white transition-all duration-300"
+              >Contact Us</a
+            >
+          </nav>
+        </div>
+      </div>
+
+      <!-- Mobile Menu -->
+      <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
+        <nav
+          class="flex flex-col space-y-1 py-3 px-4 text-sm font-semibold uppercase"
+        >
+          <a
+            href="index.html"
+            class="px-3 py-2 rounded-full hover:bg-[#ed1e28] text-white transition-all duration-300"
+            >Home</a
+          >
+          <a
+            href="about.html"
+            class="px-3 py-2 rounded-full hover:bg-[#ed1e28] hover:text-white transition-all duration-300"
+            >About Us</a
+          >
+          <a
+            href="services.html"
+            class="px-3 py-2 rounded-full hover:bg-[#ed1e28] hover:text-white transition-all duration-300"
+            >Our Services</a
+          >
+          <a
+            href="become-a-carrier.html"
+            class="px-3 py-2 rounded-full hover:bg-[#ed1e28] hover:text-white transition-all duration-300"
+            >Become a Carrier</a
+          >
+          <a
+            href="contact.html"
+            class="px-3 py-2 rounded-full hover:bg-[#ed1e28] hover:text-white transition-all duration-300"
+            >Contact Us</a
+          >
+        </nav>
+      </div>
+    </header>
+    <div
+      class="relative w-full h-[650px] bg-cover bg-center"
+      style="background-image: url('images/images.jfif')"
+    >
+      <!-- Black overlay -->
+      <div class="absolute inset-0 bg-black opacity-50"></div>
+
+      <!-- Content aligned left -->
+      <div
+        class="relative flex items-center justify-start h-full px-10 md:px-20"
+      >
+        <h1
+          class="text-white mt-[100px] text-5xl md:text-6xl font-extrabold z-10"
+        >
+          Contact Us
+        </h1>
+      </div>
+    </div>
+    <!-- Hero Section -->
+    <section class="relative w-full">
+      <div class="container mx-auto px-4 md:px-7 py-4">
+        <div class="container mx-auto px-2 md:px-4 py-4 md:py-8">
+          <!-- Main Two-Column Layout -->
+          <div class="flex flex-col lg:flex-row gap-8">
+            <!-- Left Info Section -->
+            <div class="lg:w-1/2 w-full space-y-8">
+              <!-- Locations -->
+              <div>
+                <h3
+                  class="flex items-center text-2xl font-semibold text-black mb-3"
+                >
+                  <svg
+                    class="w-6 h-6 text-yellow-500 mr-2"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5S10.62 6.5 12 6.5s2.5 1.12 2.5 2.5S13.38 11.5 12 11.5z"
+                    />
+                  </svg>
+                  Our Locations
+                </h3>
+                <ul class="text-black text-[18px] space-y-2">
+                  <li>📍 Sheridan, WY 82801, USA</li>
+                </ul>
+              </div>
+              <hr class="border-gray-300" />
+              <!-- Phone -->
+              <div>
+                <h3
+                  class="flex items-center text-2xl font-semibold text-black mb-2"
+                >
+                  <svg
+                    class="w-6 h-6 text-yellow-500 mr-2"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M6.62 10.79a15.093 15.093 0 006.59 6.59l2.2-2.2a1.004 1.004 0 011.11-.21c1.21.49 2.53.76 3.9.76a1 1 0 011 1v3.5a1 1 0 01-1 1C10.61 21.24 2.76 13.39 2.76 3a1 1 0 011-1H7a1 1 0 011 1c0 1.37.27 2.69.76 3.9a1 1 0 01-.21 1.11l-2.2 2.2z"
+                    />
+                  </svg>
+                  Our Phone
+                </h3>
+                <p class="text-black text-[18px]"></p>
+              </div>
+              <hr class="border-gray-300" />
+              <!-- Fax -->
+              <div>
+                <h3
+                  class="flex items-center text-2xl font-semibold text-black mb-2"
+                >
+                  <svg
+                    class="w-6 h-6 text-yellow-500 mr-2"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M19 7V4a2 2 0 00-2-2H7a2 2 0 00-2 2v3H3v13h18V7h-2zM8 4h8v3H8V4zm10 15H6v-7h12v7z"
+                    />
+                  </svg>
+                  Our Fax
+                </h3>
+                <p class="text-black text-[18px]"></p>
+              </div>
+            </div>
+            <!-- Right Form Section -->
+            <div class="lg:w-1/2 w-full">
+              <div class="bg-white rounded-lg shadow-md p-6">
+                <h2 class="text-2xl font-bold text-gray-900 mb-6">
+                  Feel Free To Ask A Question With Us!
+                </h2>
+                <form id="mainContactForm">
+                  <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <input
+                      type="text"
+                      id="mainName"
+                      name="name"
+                      placeholder="First Name"
+                      class="border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-yellow-500"
+                      required
+                    />
+                    <input
+                      type="text"
+                      id="lastName"
+                      name="lastName"
+                      placeholder="Last Name"
+                      class="border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-yellow-500"
+                    />
+                  </div>
+                  <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
+                    <input
+                      type="email"
+                      id="mainEmail"
+                      name="email"
+                      placeholder="Email"
+                      class="border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-yellow-500"
+                      required
+                    />
+                    <input
+                      type="tel"
+                      id="mainPhone"
+                      name="phone"
+                      placeholder="Phone"
+                      class="border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-yellow-500"
+                    />
+                  </div>
+                  <textarea
+                    id="mainMessage"
+                    name="message"
+                    rows="4"
+                    placeholder="Message"
+                    class="w-full mt-4 border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-yellow-500 resize-none"
+                    required
+                  ></textarea>
+                  <button
+                    type="submit"
+                    id="mainSubmitBtn"
+                    class="w-full mt-5 bg-yellow-500 hover:bg-black text-white font-semibold py-2 px-4 rounded-md transition-all duration-300"
+                  >
+                    SUBMIT
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+          <!-- Two Maps (below both sections) -->
+          <div class="mt-10 z-99">
+            <div id="leaflet-map" class="rounded-lg h-64 shadow-md"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Leaflet JS -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+      crossorigin=""
+    />
+    <script
+      src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+      crossorigin=""
+    ></script>
+    <!-- Map  -->
+    <script>
+      // Map banana
+      const map = L.map("leaflet-map", {
+        attributionControl: false, // Ye line attribution hatati hai
+      }).setView([44.7972, -106.9562], 12);
+
+      // OpenStreetMap tile layer (attribution hata diya)
+      L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png").addTo(
+        map
+      );
+
+      // Marker lagana
+      L.marker([44.7972, -106.9562])
+        .addTo(map)
+        .bindPopup("Sheridan, WY 82801, USA")
+        .openPopup();
+    </script>
+    <!-- footer  -->
+    <footer class="bg-indigo-900 text-white py-8">
+      <div class="container mx-auto px-4">
+        <!-- Main Footer Content -->
+        <div
+          class="flex flex-col md:flex-row justify-between gap-8"
+          style="font-family: 'Josefin Sans', sans-serif"
+        >
+          <!-- Information Section -->
+          <div class="md:w-1/3">
+            <h2
+              class="text-2xl font-extrabold uppercase mb-6 text-white tracking-wide"
+            >
+              Information
+            </h2>
+
+            <ul
+              class="space-y-2"
+              style="font-family: 'League Spartan', sans-serif"
+            >
+              <li>
+                <a
+                  href="index.html"
+                  class="text-white hover:text-red-500 font-semibold transition-colors duration-150 ease-in-outt"
+                  >Home</a
+                >
+              </li>
+              <li>
+                <a
+                  href="about.html"
+                  class="text-white hover:text-red-500 transition-colors duration-150 ease-in-ou"
+                  >About Us</a
+                >
+              </li>
+              <li>
+                <a
+                  href="services.html"
+                  class="text-white hover:text-red-500 transition-colors duration-150 ease-in-out"
+                  >Our Services</a
+                >
+              </li>
+              <li>
+                <a
+                  href="become-a-carrier.html"
+                  class="text-white hover:text-red-500 transition-colors duration-150 ease-in-out"
+                  >Become A Carrier</a
+                >
+              </li>
+              <li>
+                <a
+                  href="contact.html"
+                  class="text-red-500 transition-colors duration-150 ease-in-out"
+                  >Contact Us</a
+                >
+              </li>
+            </ul>
+          </div>
+          <script src="https://unpkg.com/lucide@latest"></script>
+
+          <div class="md:w-1/3 text-white">
+            <h2 class="text-2xl font-extrabold uppercase mb-6 tracking-wide">
+              Keep In Touch
+            </h2>
+
+            <ul
+              class="space-y-3 text-[15px]"
+              style="font-family: 'League Spartan', sans-serif"
+            >
+              <!-- EMAIL -->
+              <li class="flex items-center space-x-2">
+                <i data-lucide="mail" class="w-5 h-5 text-red-500"></i>
+                <span>E-mail : </span>
+                <a
+                  href="mailto:info@citylinxlogistics.com"
+                  class="transition-colors duration-300 ease-in-out hover:text-red-500 cursor-pointer"
+                >
+                  info@citylinxlogistics.com
+                </a>
+              </li>
+
+              <!-- ADDRESS -->
+              <li class="flex items-center space-x-2">
+                <i data-lucide="map-pin" class="w-5 h-5 text-red-500"></i>
+                <a
+                  href="https://maps.google.com/?q=30 N Gould St Ste R, Sheridan, WY 82801, USA"
+                  target="_blank"
+                  class="transition-colors duration-300 ease-in-out hover:text-red-500 cursor-pointer"
+                >
+                  30 N Gould St Ste R<br />Sheridan, WY 82801<br />USA
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <script>
+            lucide.createIcons();
+          </script>
+
+          <!-- Contact Us Section -->
+          <div class="md:w-1/3">
+            <h2 class="text-xl font-bold uppercase mb-4">Contact Us</h2>
+            <form
+              class="space-y-4"
+              style="font-family: 'League Spartan', sans-serif"
+            >
+              <input
+                type="text"
+                placeholder="Name"
+                class="w-full bg-transparent border-b border-gray-400 pb-2 focus:outline-none text-white"
+              />
+              <input
+                type="email"
+                placeholder="E-mail"
+                class="w-full bg-transparent border-b border-gray-400 pb-2 focus:outline-none text-white"
+              />
+              <textarea
+                placeholder="Message"
+                class="w-full bg-transparent border-b border-gray-400 pb-2 focus:outline-none text-white h-20 resize-none"
+              ></textarea>
+              <button
+                type="submit"
+                class="bg-red-500 text-white px-6 py-2 rounded-full font-bold hover:bg-red-600 transition-colors duration-200 ease-in-out"
+              >
+                SEND
+              </button>
+            </form>
+          </div>
+        </div>
+
+        <!-- Copyright Section -->
+        <div
+          class="mt-8 flex justify-start items-end text-[10px] text-gray-500"
+        ></div>
+      </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button
+      onclick="window.scrollTo({top: 0, behavior: 'smooth'})"
+      class="back-to-top-btn fixed bottom-5 right-5 bg-[#ed1e28] text-white p-3 rounded-full shadow-lg hover:bg-[#d61a22] transition-all duration-300 z-50"
+      style="display: none; opacity: 0"
+      title="Back to top"
+    >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke-width="2"
+        stroke="currentColor"
+        class="w-6 h-6"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M4.5 15.75l7.5-7.5 7.5 7.5"
+        />
+      </svg>
+    </button>
+
+    <!-- Success Modal -->
+    <div
+      id="successModal"
+      class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden z-50"
+    >
+      <div class="bg-white p-6 rounded-lg shadow-lg max-w-sm w-full mx-4">
+        <h2 class="text-2xl font-bold mb-4 text-green-600">Success!</h2>
+        <p class="mb-4">Thank you! Your message has been sent successfully.</p>
+        <button
+          id="closeModal"
+          class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"
+        >
+          Close
+        </button>
+      </div>
+    </div>
+    <script>
+      const btn = document.getElementById("menu-btn");
+      const menu = document.getElementById("mobile-menu");
+      btn.addEventListener("click", () => {
+        menu.classList.toggle("hidden");
+      });
+
+      // Auto-highlight active page
+      const currentPage = location.pathname.split("/").pop();
+      document.querySelectorAll("nav a").forEach((link) => {
+        if (link.getAttribute("href") === currentPage) {
+          link.classList.add("bg-[#ed1e28]", "text-white");
+        } else {
+          link.classList.remove("bg-[#ed1e28]", "text-white");
+        }
+      });
+    </script>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>

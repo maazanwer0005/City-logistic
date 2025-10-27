@@ -1,0 +1,19 @@
+This directory contains all images for the Prime Logistics Solutions website.
+
+For a complete website, you would need to add the following image files:
+
+1. Logo files (logo.png, logo-white.png)
+2. Hero images (hero-truck.jpg)
+3. Service images (service-*.jpg)
+4. Team photos (ceo.jpg, coo.jpg, cto.jpg)
+5. About page images (about-team.jpg)
+6. Icons (icon-*.svg)
+
+See README.md in this directory for detailed specifications.
+
+For development purposes, you can use placeholder images from services like:
+- https://via.placeholder.com/
+- https://picsum.photos/
+- https://unsplash.com/
+
+All images should be optimized for web use and properly licensed for commercial use.
